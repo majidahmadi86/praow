@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="praow-build" content="praow-v3-b0e5421">
+  <meta name="praow-build" content="praow-v4-pending">
   <title>PRAOW CLINIC · Aesthetic Medicine · Thonglor</title>
   <meta name="description" content="Botox, fillers and skin quality in Thonglor. Planned by doctors, booked in one minute.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
-  <link rel="preload" as="image" href="images/opt/hero-v3b.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="images/opt/hero-v4.jpg" fetchpriority="high">
   <link rel="preload" as="font" href="fonts/cormorant-2.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="fonts/manrope-6.woff2" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/fonts.css">
@@ -22,10 +22,7 @@
   <header class="site-header">
     <div class="header-in">
       <a href="index.html" class="logo">
-        <svg class="logo-arch" viewBox="0 0 32 36" width="28" height="32" aria-hidden="true" focusable="false">
-          <path d="M4 34V16a12 12 0 0 1 24 0v18" fill="none" stroke="#A67C46" stroke-width="1.5" stroke-linecap="round"/>
-          <circle cx="16" cy="5.5" r="2.35" fill="#A67C46"/>
-        </svg>
+        <svg class="logo-fan" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" fill="none"><line x1="6" y1="26" x2="26" y2="26" stroke="#C08A6B" stroke-width="1" stroke-linecap="round"/><line class="fan-ray" data-ray="0" x1="16" y1="26" x2="8.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="1" x1="16" y1="26" x2="7.22" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="2" x1="16" y1="26" x2="8.22" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="3" x1="16" y1="26" x2="11.22" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="4" x1="16" y1="26" x2="16.00" y2="12.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="5" x1="16" y1="26" x2="20.78" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="6" x1="16" y1="26" x2="23.78" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="7" x1="16" y1="26" x2="24.78" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="8" x1="16" y1="26" x2="24.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/></svg>
         <span class="logo-text">
           <span class="logo-mark" data-i18n="brand.mark">PRAOW</span>
           <span class="logo-sub" data-i18n="brand.clinic">Clinic · Thonglor</span>
@@ -60,28 +57,59 @@
   </div>
 
   <main>
-    <section class="hero is-ready">
+    <section class="hero">
       <div class="hero-copy">
+        <div class="hero-micro"><span data-i18n="hero.micro">Aesthetic Medicine ✦ Thonglor, Bangkok ✦ Est. 2019</span></div>
         <h1 class="hero-display">
-          <span data-i18n="hero.l1">Skin,</span>
-          <span data-i18n="hero.l2">treated like</span>
-          <span data-i18n="hero.l3">a <em class="ital">craft</em>.</span>
+          <span class="line-mask"><span data-i18n="hero.l1">Skin,</span></span>
+          <span class="line-mask"><span data-i18n="hero.l2">treated like</span></span>
+          <span class="line-mask"><span data-i18n="hero.l3">a <em class="ital">craft</em>.</span></span>
         </h1>
         <p class="lede" data-i18n="hero.lede">Botox, fillers and skin quality · planned by doctors, booked in one minute.</p>
         <div class="hero-cta">
           <a class="btn" href="booking.html" data-i18n="hero.cta1">Book now</a>
           <a class="btn ghost" href="consult.html" data-i18n="hero.cta2">Free consultation</a>
         </div>
+        <div class="stat-strip" id="stat-strip">
+          <div class="stat"><strong data-count="12">12</strong><span data-i18n="hero.stat1">years practice</span></div>
+          <div class="div" aria-hidden="true"></div>
+          <div class="stat"><strong>★ <span data-count="4.9" data-decimals="1">4.9</span></strong><span data-i18n="hero.stat2">128 reviews</span></div>
+          <div class="div" aria-hidden="true"></div>
+          <div class="stat"><strong><span data-count="24">24</span>h</strong><span data-i18n="hero.stat3">Replies within 24h</span></div>
+        </div>
       </div>
       <div class="hero-visual">
-        <div class="hero-arch-outline" aria-hidden="true"><span class="sun-dot"></span></div>
+        <div class="hero-parallax" data-parallax="0.85">
+          <div class="hero-fan-wrap" aria-hidden="true"></div>
+          <div class="hero-arch-outline"></div>
+        </div>
         <div class="hero-arch">
-          <img src="images/opt/hero-v3b.jpg" alt="Warm-light beauty portrait with calm expression" fetchpriority="high" width="720" height="960">
+          <img src="images/opt/hero-v4.jpg" alt="Warm neutral clinical-calm beauty portrait" fetchpriority="high" width="720" height="960">
           <div class="hero-chips">
-            <div class="glass-chip c1"><span class="star">★</span> <span data-i18n="hero.chip">4.9 · 128 Google reviews</span></div>
-            <div class="glass-chip c2" data-i18n="hero.slot">Next slot today · 14:30</div>
-            <div class="glass-chip c3" data-i18n="hero.deposit">฿500 locks your slot</div>
+            <div class="glass-chip c1 chip-reviews"><span class="star">★</span> <span data-i18n="hero.chip">4.9 · 128 Google reviews</span></div>
+            <div class="glass-chip c2 chip-slot" data-i18n="hero.slot">Next slot today · 14:30</div>
+            <div class="glass-chip c3 chip-deposit" data-i18n="hero.deposit">฿500 locks your slot</div>
           </div>
+        </div>
+      </div>
+      <div class="hero-mobile-card">
+        <div class="hero-micro"><span data-i18n="hero.micro">Aesthetic Medicine ✦ Thonglor, Bangkok ✦ Est. 2019</span></div>
+        <h1 class="hero-display">
+          <span class="line-mask"><span data-i18n="hero.l1">Skin,</span></span>
+          <span class="line-mask"><span data-i18n="hero.l2">treated like</span></span>
+          <span class="line-mask"><span data-i18n="hero.l3">a <em class="ital">craft</em>.</span></span>
+        </h1>
+        <p class="lede" data-i18n="hero.lede">Botox, fillers and skin quality · planned by doctors, booked in one minute.</p>
+        <div class="hero-cta">
+          <a class="btn" href="booking.html" data-i18n="hero.cta1">Book now</a>
+          <a class="btn ghost" href="consult.html" data-i18n="hero.cta2">Free consultation</a>
+        </div>
+        <div class="stat-strip">
+          <div class="stat"><strong data-i18n="hero.stat1n">12</strong><span data-i18n="hero.stat1">years practice</span></div>
+          <div class="div" aria-hidden="true"></div>
+          <div class="stat"><strong>★ 4.9</strong><span data-i18n="hero.stat2">128 reviews</span></div>
+          <div class="div" aria-hidden="true"></div>
+          <div class="stat"><strong data-i18n="hero.stat3n">24h</strong><span data-i18n="hero.stat3">Replies within 24h</span></div>
         </div>
       </div>
     </section>
@@ -182,11 +210,7 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <div class="logo">
-          <svg class="logo-arch" viewBox="0 0 32 36" width="28" height="32" aria-hidden="true" focusable="false">
-            <path d="M4 34V16a12 12 0 0 1 24 0v18" fill="none" stroke="#A67C46" stroke-width="1.5" stroke-linecap="round"/>
-            <circle cx="16" cy="5.5" r="2.35" fill="#A67C46"/>
-          </svg>
+        <div class="logo"><svg class="logo-fan footer-fan" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" fill="none"><line x1="6" y1="26" x2="26" y2="26" stroke="#C08A6B" stroke-width="1" stroke-linecap="round"/><line class="fan-ray" data-ray="0" x1="16" y1="26" x2="8.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="1" x1="16" y1="26" x2="7.22" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="2" x1="16" y1="26" x2="8.22" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="3" x1="16" y1="26" x2="11.22" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="4" x1="16" y1="26" x2="16.00" y2="12.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="5" x1="16" y1="26" x2="20.78" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="6" x1="16" y1="26" x2="23.78" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="7" x1="16" y1="26" x2="24.78" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="8" x1="16" y1="26" x2="24.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/></svg>
           <span class="logo-text">
             <span class="logo-mark" data-i18n="brand.mark">PRAOW</span>
             <span class="logo-sub" data-i18n="brand.clinic">Clinic · Thonglor</span>
