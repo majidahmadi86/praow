@@ -349,17 +349,8 @@
   function initHeroCurtain() {
     var hero = document.querySelector(".hero");
     if (!hero) { return; }
-    var img = hero.querySelector(".hero-arch img") || hero.querySelector("img");
-    function ready() { hero.classList.add("is-ready"); }
-    if (img && img.complete) {
-      window.setTimeout(ready, 80);
-    } else if (img) {
-      img.addEventListener("load", function () { window.setTimeout(ready, 80); });
-      img.addEventListener("error", ready);
-    } else {
-      ready();
-    }
-    window.setTimeout(ready, 1600);
+    // Reveal immediately so the ivory curtain never delays LCP.
+    hero.classList.add("is-ready");
   }
 
   function initBaSliders() {
