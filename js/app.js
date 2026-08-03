@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  var PRAOW_BUILD = "praow-v5-ce0af35";
+  var PRAOW_BUILD = "praow-v5-e50da49";
   try {
     document.documentElement.setAttribute("data-praow-build", PRAOW_BUILD);
     var meta = document.querySelector('meta[name="praow-build"]');
