@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="praow-build" content="praow-v3-b0e5421">
+  <meta name="praow-build" content="praow-v4-pending">
   <title>Book · PRAOW CLINIC</title>
   <meta name="description" content="Book a visit and lock your slot with a ฿500 deposit.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -20,7 +20,7 @@
   <header class="site-header">
     <div class="header-in">
       <a href="index.html" class="logo">
-        <svg class="logo-arch" viewBox="0 0 32 36" width="28" height="32" aria-hidden="true"><path d="M4 34V16a12 12 0 0 1 24 0v18" fill="none" stroke="#A67C46" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="5.5" r="2.35" fill="#A67C46"/></svg>
+        <svg class="logo-fan" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" fill="none"><line x1="6" y1="26" x2="26" y2="26" stroke="#C08A6B" stroke-width="1" stroke-linecap="round"/><line class="fan-ray" data-ray="0" x1="16" y1="26" x2="8.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="1" x1="16" y1="26" x2="7.22" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="2" x1="16" y1="26" x2="8.22" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="3" x1="16" y1="26" x2="11.22" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="4" x1="16" y1="26" x2="16.00" y2="12.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="5" x1="16" y1="26" x2="20.78" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="6" x1="16" y1="26" x2="23.78" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="7" x1="16" y1="26" x2="24.78" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="8" x1="16" y1="26" x2="24.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/></svg>
         <span class="logo-text"><span class="logo-mark" data-i18n="brand.mark">PRAOW</span><span class="logo-sub" data-i18n="brand.clinic">Clinic · Thonglor</span></span>
       </a>
       <nav class="nav">
@@ -105,13 +105,32 @@
             </div>
           </div>
           <div class="book-step" data-step="4">
-            <div class="success-state show">
-              <div class="ok" aria-hidden="true"><svg viewBox="0 0 32 36" width="28" height="32"><path d="M4 34V16a12 12 0 0 1 24 0v18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M11 20l4 4 7-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-              <h3 data-i18n="bk.ok.title">Slot locked (demo)</h3>
-              <p class="book-summary" id="bk-ok-summary" style="display:inline-block;margin-top:14px"></p>
-              <p class="note" data-i18n="bk.ok.text">Your deposit would lock this appointment on a live site. Nothing was charged here.</p>
+            <div class="success-state show" id="booking-success">
+              <article class="ticket" id="booking-ticket">
+                <div class="ticket-head">
+                  <span class="ticket-fan" aria-hidden="true"></span>
+                  <div class="brand">PRAOW CLINIC</div>
+                </div>
+                <div class="ticket-perf" aria-hidden="true"></div>
+                <div class="ticket-body">
+                  <div class="ticket-row"><span class="k" data-i18n="bk.t.service">Service</span><span class="v" id="tk-service">...</span></div>
+                  <div class="ticket-row"><span class="k" data-i18n="bk.t.date">Date</span><span class="v" id="tk-date">...</span></div>
+                  <div class="ticket-row"><span class="k" data-i18n="bk.t.time">Time</span><span class="v" id="tk-time">...</span></div>
+                  <div class="ticket-row"><span class="k" data-i18n="bk.t.deposit">Deposit</span><span class="v" id="tk-deposit" data-i18n="bk.t.paid">Paid ✦ ฿500 (demo)</span></div>
+                </div>
+                <div class="ticket-foot">
+                  <div>
+                    <div class="k" data-i18n="bk.t.code">Booking code</div>
+                    <div class="ticket-code" id="tk-code">PRW-0000</div>
+                  </div>
+                  <div class="ticket-qr"><img id="tk-qr" alt="Booking QR" width="64" height="64"></div>
+                </div>
+              </article>
+              <div class="ticket-actions">
+                <button type="button" class="btn" id="tk-save" data-i18n="bk.t.save">Save to phone</button>
+                <button type="button" class="btn ghost" data-restart="1" data-i18n="bk.t.new">New booking</button>
+              </div>
               <div class="demo-banner" style="margin:18px auto 0" data-i18n="bk.demo">Demo mode · deposits are not charged.</div>
-              <a class="btn" style="margin-top:22px" href="index.html" data-i18n="brand.mark">PRAOW</a>
             </div>
           </div>
         </div>
@@ -121,7 +140,7 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <div class="logo"><svg class="logo-arch" viewBox="0 0 32 36" width="28" height="32" aria-hidden="true"><path d="M4 34V16a12 12 0 0 1 24 0v18" fill="none" stroke="#A67C46" stroke-width="1.5" stroke-linecap="round"/><circle cx="16" cy="5.5" r="2.35" fill="#A67C46"/></svg><span class="logo-text"><span class="logo-mark" data-i18n="brand.mark">PRAOW</span><span class="logo-sub" data-i18n="brand.clinic">Clinic · Thonglor</span></span></div>
+        <div class="logo"><svg class="logo-fan footer-fan" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" fill="none"><line x1="6" y1="26" x2="26" y2="26" stroke="#C08A6B" stroke-width="1" stroke-linecap="round"/><line class="fan-ray" data-ray="0" x1="16" y1="26" x2="8.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="1" x1="16" y1="26" x2="7.22" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="2" x1="16" y1="26" x2="8.22" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="3" x1="16" y1="26" x2="11.22" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="4" x1="16" y1="26" x2="16.00" y2="12.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="5" x1="16" y1="26" x2="20.78" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="6" x1="16" y1="26" x2="23.78" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="7" x1="16" y1="26" x2="24.78" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="8" x1="16" y1="26" x2="24.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/></svg><span class="logo-text"><span class="logo-mark" data-i18n="brand.mark">PRAOW</span><span class="logo-sub" data-i18n="brand.clinic">Clinic · Thonglor</span></span></div>
         <p data-i18n="foot.tag">Aesthetic medicine in Thonglor. Planned by doctors, booked in one minute.</p>
       </div>
       <div><h4 data-i18n="foot.pages">Pages</h4><a href="treatments.html" data-i18n="nav.treatments">Treatments</a><a href="results.html" data-i18n="nav.results">Results</a><a href="consult.html" data-i18n="nav.consult">Consult</a><a href="booking.html" data-i18n="nav.booking">Book</a></div>

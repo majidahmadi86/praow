@@ -2,13 +2,22 @@
 (function () {
   "use strict";
 
-  var PRAOW_BUILD = "praow-v3-b0e5421";
+  var PRAOW_BUILD = "praow-v4-pending";
   try {
     document.documentElement.setAttribute("data-praow-build", PRAOW_BUILD);
     var meta = document.querySelector('meta[name="praow-build"]');
     if (meta) { meta.setAttribute("content", PRAOW_BUILD); }
     console.info("[praow]", PRAOW_BUILD);
   } catch (e) {}
+
+  var reduceMotion = false;
+  try {
+    reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  } catch (e2) {}
+
+  var FAN_SVG = '<svg class="logo-fan" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" fill="none"><line x1="6" y1="26" x2="26" y2="26" stroke="#C08A6B" stroke-width="1" stroke-linecap="round"/><line class="fan-ray" data-ray="0" x1="16" y1="26" x2="8" y2="26" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="1" x1="16" y1="26" x2="7.22" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="2" x1="16" y1="26" x2="8.22" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="3" x1="16" y1="26" x2="11.22" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="4" x1="16" y1="26" x2="16" y2="12" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="5" x1="16" y1="26" x2="20.78" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="6" x1="16" y1="26" x2="23.78" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="7" x1="16" y1="26" x2="24.78" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="8" x1="16" y1="26" x2="24" y2="26" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/></svg>';
+
+  var HERO_FAN = '<svg class="hero-fan" viewBox="0 0 200 180" aria-hidden="true" fill="none"><line x1="40" y1="160" x2="160" y2="160" stroke="#C08A6B" stroke-width="1.5" stroke-linecap="round" opacity="0.35"/><line class="fan-ray" data-ray="0" x1="100" y1="160" x2="45" y2="160" stroke="#C08A6B" stroke-width="2" stroke-linecap="round"/><line class="fan-ray" data-ray="1" x1="100" y1="160" x2="41.1" y2="135.6" stroke="#C08A6B" stroke-width="2" stroke-linecap="round"/><line class="fan-ray" data-ray="2" x1="100" y1="160" x2="48.73" y2="108.73" stroke="#C08A6B" stroke-width="2" stroke-linecap="round"/><line class="fan-ray" data-ray="3" x1="100" y1="160" x2="68.91" y2="84.93" stroke="#C08A6B" stroke-width="2" stroke-linecap="round"/><line class="fan-ray" data-ray="4" x1="100" y1="160" x2="100" y2="70" stroke="#C08A6B" stroke-width="2" stroke-linecap="round"/><line class="fan-ray" data-ray="5" x1="100" y1="160" x2="131.09" y2="84.93" stroke="#C08A6B" stroke-width="2" stroke-linecap="round"/><line class="fan-ray" data-ray="6" x1="100" y1="160" x2="151.27" y2="108.73" stroke="#C08A6B" stroke-width="2" stroke-linecap="round"/><line class="fan-ray" data-ray="7" x1="100" y1="160" x2="158.9" y2="135.6" stroke="#C08A6B" stroke-width="2" stroke-linecap="round"/><line class="fan-ray" data-ray="8" x1="100" y1="160" x2="155" y2="160" stroke="#C08A6B" stroke-width="2" stroke-linecap="round"/></svg>';
 
   var dict = {
     en: {
@@ -25,11 +34,17 @@
       "hero.l1": "Skin,",
       "hero.l2": "treated like",
       "hero.l3": "a <em class=\"ital\">craft</em>.",
+      "hero.micro": "Aesthetic Medicine ✦ Thonglor, Bangkok ✦ Est. 2019",
       "hero.title": "Skin, treated like a <em class=\"ital\">craft</em>.",
       "hero.lede": "Botox, fillers and skin quality · planned by doctors, booked in one minute.",
       "hero.chip": "4.9 · 128 Google reviews",
       "hero.slot": "Next slot today · 14:30",
       "hero.deposit": "฿500 locks your slot",
+      "hero.stat1n": "12",
+      "hero.stat1": "years practice",
+      "hero.stat2": "128 reviews",
+      "hero.stat3n": "24h",
+      "hero.stat3": "Replies within 24h",
       "hero.float": "Bookable in 1 minute",
       "hero.cta1": "Book now",
       "hero.cta2": "Free consultation",
@@ -141,6 +156,15 @@
       "bk.confirm": "Confirm booking",
       "bk.ok.title": "Slot locked (demo)",
       "bk.ok.text": "Your deposit would lock this appointment on a live site. Nothing was charged here.",
+      "bk.t.service": "Service",
+      "bk.t.date": "Date",
+      "bk.t.time": "Time",
+      "bk.t.deposit": "Deposit",
+      "bk.t.paid": "Paid ✦ ฿500 (demo)",
+      "bk.t.code": "Booking code",
+      "bk.t.save": "Save to phone",
+      "bk.t.new": "New booking",
+      "bk.t.save.note": "Screenshot this ticket to keep your demo booking.",
       "bk.today": "Today",
       "chat.hi": "Hello · I am the PRAOW CLINIC receptionist. Ask about prices, booking, or a free consult.",
       "chat.ph": "Ask about treatments…",
@@ -162,11 +186,17 @@
       "hero.l1": "ผิว<em class=\"ital\">พราว</em>",
       "hero.l2": "ดูแลอย่าง",
       "hero.l3": "งานฝีมือ",
+      "hero.micro": "เวชศาสตร์ความงาม ✦ ทองหล่อ กรุงเทพฯ",
       "hero.title": "ผิวพราว ดูแลอย่าง<em class=\"ital\">งานฝีมือ</em>",
       "hero.lede": "โบท็อกซ์ ฟิลเลอร์ และผิวสุขภาพดี วางแผนโดยแพทย์ จองได้ในหนึ่งนาที",
       "hero.chip": "4.9 · รีวิว Google 128 รายการ",
       "hero.slot": "คิวว่างวันนี้ · 14:30",
       "hero.deposit": "มัดจำ 500.- ล็อกคิว",
+      "hero.stat1n": "12",
+      "hero.stat1": "ปี ประสบการณ์",
+      "hero.stat2": "128 รีวิว",
+      "hero.stat3n": "24 ชม.",
+      "hero.stat3": "ตอบภายใน 24 ชม.",
       "hero.float": "จองได้ใน 1 นาที",
       "hero.cta1": "จองคิวเลย",
       "hero.cta2": "ปรึกษาฟรี",
@@ -278,6 +308,15 @@
       "bk.confirm": "ยืนยันการจอง",
       "bk.ok.title": "ล็อกคิวแล้ว (เดโม่)",
       "bk.ok.text": "บนเว็บจริง มัดจำจะล็อกคิวนี้ ที่นี่ไม่มีการตัดเงิน",
+      "bk.t.service": "บริการ",
+      "bk.t.date": "วัน",
+      "bk.t.time": "เวลา",
+      "bk.t.deposit": "มัดจำ",
+      "bk.t.paid": "ชำระแล้ว ✦ 500.- (เดโม่)",
+      "bk.t.code": "รหัสจอง",
+      "bk.t.save": "บันทึกลงมือถือ",
+      "bk.t.new": "จองอีกครั้ง",
+      "bk.t.save.note": "ถ่ายภาพหน้าจอตั๋วนี้เพื่อเก็บการจองเดโม่",
       "bk.today": "วันนี้",
       "chat.hi": "สวัสดีค่ะ · ฉันคือพนักงานต้อนรับ PRAOW CLINIC ถามเรื่องราคา จองคิว หรือปรึกษาฟรีได้เลย",
       "chat.ph": "ถามเกี่ยวกับทรีตเมนต์…",
@@ -312,8 +351,10 @@
     }
     var ribbon = document.querySelector(".demo-ribbon");
     if (ribbon) {
-      ribbon.textContent = t("ribbon");
       ribbon.setAttribute("href", t("ribbon.href"));
+      var span = ribbon.querySelector("span");
+      if (span) { span.textContent = t("ribbon"); }
+      else { ribbon.innerHTML = FAN_SVG.replace('width="30" height="30"', 'width="14" height="14"') + "<span>" + t("ribbon") + "</span>"; }
     }
     document.dispatchEvent(new CustomEvent("praow:lang", { detail: { lang: lang, t: t } }));
   }
@@ -353,28 +394,112 @@
 
   function initReveals() {
     var items = document.querySelectorAll(".reveal");
+    var sections = document.querySelectorAll(".section-ivory, .section-blush");
+    // stagger within section
+    for (var s = 0; s < sections.length; s++) {
+      var kids = sections[s].querySelectorAll(".reveal");
+      for (var k = 0; k < kids.length; k++) {
+        kids[k].setAttribute("data-stagger", String((k % 4) + 1));
+      }
+    }
     if ("IntersectionObserver" in window) {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) {
           if (en.isIntersecting) {
             en.target.classList.add("revealed");
+            en.target.classList.add("in-view");
             io.unobserve(en.target);
           }
         });
       }, { threshold: 0.12 });
       for (var i = 0; i < items.length; i++) { io.observe(items[i]); }
+      for (var j = 0; j < sections.length; j++) { io.observe(sections[j]); }
     }
     window.setTimeout(function () {
       var all = document.querySelectorAll(".reveal");
-      for (var j = 0; j < all.length; j++) { all[j].classList.add("revealed"); }
+      for (var n = 0; n < all.length; n++) { all[n].classList.add("revealed"); }
+      for (var m = 0; m < sections.length; m++) { sections[m].classList.add("in-view"); }
     }, 2500);
   }
 
   function initHeroCurtain() {
     var hero = document.querySelector(".hero");
     if (!hero) { return; }
-    // Reveal immediately so the ivory curtain never delays LCP.
-    hero.classList.add("is-ready");
+    var wrap = hero.querySelector(".hero-fan-wrap");
+    if (wrap && !wrap.querySelector("svg")) { wrap.innerHTML = HERO_FAN; }
+    requestAnimationFrame(function () {
+      hero.classList.add("is-ready");
+    });
+  }
+
+  function initParallax() {
+    if (reduceMotion) { return; }
+    var layer = document.querySelector("[data-parallax]");
+    if (!layer) { return; }
+    var factor = parseFloat(layer.getAttribute("data-parallax")) || 0.85;
+    function onScroll() {
+      var y = window.scrollY || 0;
+      if (y > 700) { return; }
+      layer.style.transform = "translate3d(0," + (y * (1 - factor)) + "px,0)";
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  function initStatCount() {
+    var strip = document.getElementById("stat-strip");
+    if (!strip) { return; }
+    var done = false;
+    function run() {
+      if (done) { return; }
+      done = true;
+      var nodes = strip.querySelectorAll("[data-count]");
+      for (var i = 0; i < nodes.length; i++) {
+        (function (el) {
+          var target = parseFloat(el.getAttribute("data-count"));
+          var decimals = parseInt(el.getAttribute("data-decimals") || "0", 10);
+          if (reduceMotion || isNaN(target)) {
+            el.textContent = decimals ? target.toFixed(decimals) : String(target);
+            return;
+          }
+          var start = performance.now();
+          var dur = 600;
+          function frame(now) {
+            var p = Math.min(1, (now - start) / dur);
+            var val = target * p;
+            el.textContent = decimals ? val.toFixed(decimals) : String(Math.round(val));
+            if (p < 1) { requestAnimationFrame(frame); }
+          }
+          requestAnimationFrame(frame);
+        })(nodes[i]);
+      }
+    }
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { run(); io.disconnect(); }
+        });
+      }, { threshold: 0.4 });
+      io.observe(strip);
+    } else { run(); }
+  }
+
+  function initFooterFan() {
+    var foot = document.querySelector(".site-footer");
+    if (!foot) { return; }
+    if ("IntersectionObserver" in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            foot.classList.add("is-lit");
+            io.disconnect();
+          }
+        });
+      }, { threshold: 0.2 });
+      io.observe(foot);
+    } else {
+      foot.classList.add("is-lit");
+    }
   }
 
   function initBaSliders() {
@@ -385,6 +510,7 @@
         var handle = root.querySelector(".ba-handle");
         var beforeImg = wrap ? wrap.querySelector("img") : null;
         var dragging = false;
+        var nudged = false;
 
         function size() {
           if (beforeImg) { beforeImg.style.setProperty("--ba-w", root.offsetWidth + "px"); beforeImg.style.width = root.offsetWidth + "px"; }
@@ -394,6 +520,11 @@
           var rect = root.getBoundingClientRect();
           var x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
           var pct = (x / rect.width) * 100;
+          if (wrap) { wrap.style.width = pct + "%"; }
+          if (handle) { handle.style.left = pct + "%"; }
+        }
+
+        function setPct(pct) {
           if (wrap) { wrap.style.width = pct + "%"; }
           if (handle) { handle.style.left = pct + "%"; }
         }
@@ -424,6 +555,23 @@
         window.addEventListener("touchmove", move, { passive: false });
         window.addEventListener("mouseup", end);
         window.addEventListener("touchend", end);
+
+        if (!reduceMotion && "IntersectionObserver" in window) {
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+              if (en.isIntersecting && !nudged) {
+                nudged = true;
+                var base = 50;
+                setPct(base);
+                window.setTimeout(function () { setPct(base - (12 / root.offsetWidth) * 100); }, 120);
+                window.setTimeout(function () { setPct(base + (12 / root.offsetWidth) * 100); }, 320);
+                window.setTimeout(function () { setPct(base); }, 520);
+                io.disconnect();
+              }
+            });
+          }, { threshold: 0.35 });
+          io.observe(root);
+        }
       })(sliders[i]);
     }
   }
@@ -476,7 +624,8 @@
       service: 0,
       dayIndex: 0,
       slot: null,
-      pay: "prompt"
+      pay: "prompt",
+      bookingCode: null
     };
 
     var services = ["bk.svc1", "bk.svc2", "bk.svc3"];
@@ -566,6 +715,36 @@
         okSum.innerHTML = t(services[state.service]) + " · " + lb3.name + " " + lb3.num + " · " + state.slot + ":00 · " +
           (state.pay === "prompt" ? "PromptPay" : "Card") + " · ฿500";
       }
+
+      if (state.step === 4) {
+        fillTicket(dayLabel(state.dayIndex));
+      }
+    }
+
+    function fillTicket(lb) {
+      if (!state.bookingCode) {
+        state.bookingCode = "PRW-" + String(1000 + Math.floor(Math.random() * 9000));
+      }
+      var code = state.bookingCode;
+      var svc = root.querySelector("#tk-service");
+      var date = root.querySelector("#tk-date");
+      var time = root.querySelector("#tk-time");
+      var codeEl = root.querySelector("#tk-code");
+      var qr = root.querySelector("#tk-qr");
+      var fan = root.querySelector(".ticket-fan");
+      if (fan && !fan.querySelector("svg")) { fan.innerHTML = FAN_SVG; }
+      if (svc) { svc.textContent = t(services[state.service]); }
+      if (date) { date.textContent = lb.name + " " + lb.num; }
+      if (time) { time.textContent = state.slot + ":00"; }
+      if (codeEl) { codeEl.textContent = code; }
+      if (qr) {
+        qr.src = "https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=" + encodeURIComponent(code);
+        qr.onerror = function () { qr.src = "images/opt/ticket-qr-demo.png"; };
+      }
+      var ticket = root.querySelector("#booking-ticket");
+      if (ticket && !ticket.classList.contains("is-in")) {
+        window.setTimeout(function () { ticket.classList.add("is-in"); }, 40);
+      }
     }
 
     root.addEventListener("click", function (e) {
@@ -603,9 +782,35 @@
       }
       if (el.hasAttribute("data-confirm")) {
         state.step = 4;
+        state.bookingCode = null;
+        var ticket = root.querySelector("#booking-ticket");
+        if (ticket) { ticket.classList.remove("is-in"); }
         render();
+        return;
+      }
+      if (el.hasAttribute("data-restart")) {
+        state.step = 1;
+        state.slot = null;
+        state.bookingCode = null;
+        var ticket2 = root.querySelector("#booking-ticket");
+        if (ticket2) { ticket2.classList.remove("is-in"); }
+        render();
+        return;
       }
     });
+
+    var saveBtn = root.querySelector("#tk-save");
+    if (saveBtn) {
+      saveBtn.addEventListener("click", function () {
+        var code = (root.querySelector("#tk-code") || {}).textContent || "PRW";
+        var text = "PRAOW · " + code;
+        if (navigator.share) {
+          navigator.share({ title: "PRAOW booking", text: text }).catch(function () {});
+        } else {
+          window.alert(t("bk.t.save.note"));
+        }
+      });
+    }
 
     window.PraowBooking = { refresh: render };
     render();
@@ -626,7 +831,7 @@
       document.body.appendChild(a);
     }
     a.href = t("ribbon.href");
-    a.innerHTML = '<svg class="logo-arch" viewBox="0 0 32 36" width="14" height="16" aria-hidden="true"><path d="M4 34V16a12 12 0 0 1 24 0v18" fill="none" stroke="#A67C46" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="5.5" r="2.8" fill="#A67C46"/></svg><span>' + t("ribbon") + "</span>";
+    a.innerHTML = FAN_SVG.replace('width="30" height="30"', 'width="14" height="14"') + "<span>" + t("ribbon") + "</span>";
   }
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -642,6 +847,9 @@
     initDrawer();
     initReveals();
     initHeroCurtain();
+    initParallax();
+    initStatCount();
+    initFooterFan();
     initBaSliders();
     initConsult();
     initBookingPage();
