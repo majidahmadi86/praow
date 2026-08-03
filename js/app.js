@@ -4,7 +4,8 @@
 
   var dict = {
     en: {
-      "brand.name": "PRAOW CLINIC",
+      "brand.mark": "PRAOW",
+      "brand.clinic": "Clinic",
       "brand.sub": "Aesthetic Medicine · Thonglor",
       "nav.treatments": "Treatments",
       "nav.results": "Results",
@@ -13,13 +14,14 @@
       "nav.book": "Book now",
       "ribbon": "DEMO · Built by Mikaro Studio in 48h",
       "ribbon.href": "https://mikaro.studio/business",
-      "hero.title": "Skin, treated like a craft.",
+      "hero.title": "Skin, treated like a <em class=\"ital\">craft</em>.",
       "hero.lede": "Botox, fillers and skin quality · planned by doctors, booked in one minute.",
-      "hero.chip": "★ 4.9 · 128 reviews",
+      "hero.chip": "4.9 · 128 Google reviews",
+      "hero.float": "Bookable in 1 minute",
       "hero.cta1": "Book now",
       "hero.cta2": "Free consultation",
       "sig.eyebrow": "Signature treatments",
-      "sig.title": "Clear starting points, doctor-led plans",
+      "sig.title": "Clear starting points, doctor-led <em class=\"ital\">plans</em>",
       "sig.lede": "Every visit begins with a free consultation. Prices below are from-prices before a personal plan.",
       "t1.name": "Botox",
       "t1.price": "From ฿6,500 per area",
@@ -29,7 +31,7 @@
       "t3.price": "Booster + pico from ฿3,900",
       "more": "View details",
       "ba.eyebrow": "Results",
-      "ba.title": "Texture you can compare",
+      "ba.title": "Texture you can <em class=\"ital\">compare</em>",
       "ba.lede": "Drag the handle. Skin-texture crops only · results vary by individual.",
       "ba.before": "Before",
       "ba.after": "After",
@@ -42,10 +44,10 @@
       "ba.cap6": "Pico + booster · 4 weeks",
       "ba.note": "Results vary by individual",
       "doc.eyebrow": "Clinical care",
-      "doc.title": "Led by aesthetic physicians · 12 years of practice",
+      "doc.title": "Led by aesthetic physicians · 12 years of <em class=\"ital\">practice</em>",
       "doc.lede": "Plans are made in person. No named doctor photos in this demo · the focus stays on calm process and clear pricing.",
       "rev.eyebrow": "Guest notes",
-      "rev.title": "Quiet feedback from recent visits",
+      "rev.title": "Quiet feedback from recent <em class=\"ital\">visits</em>",
       "rev1": "Booked online on a Tuesday, deposit locked the slot, and the consult felt unhurried.",
       "rev1.who": "N. · Sukhumvit",
       "rev2": "I asked about filler pricing in chat, then used the free consult form with a photo the same evening.",
@@ -86,7 +88,7 @@
       "tx.meta.down": "Downtime",
       "tx.meta.price": "From price",
       "tx.note": "Every plan starts with a free doctor consultation",
-      "cf.demo": "Demo mode · nothing is sent to a clinic. The form runs fully in your browser so you can feel the funnel.",
+      "cf.demo": "Demo mode · nothing is sent to a clinic. Form runs in your browser.",
       "cf.s1": "Send your photo and concern",
       "cf.s2": "Doctor reviews",
       "cf.s3": "Your plan and price within 24h",
@@ -99,14 +101,17 @@
       "cf.submit": "Send consultation",
       "cf.ok.title": "Sent · a doctor replies within 24h (demo mode)",
       "cf.ok.text": "In a live clinic build, this lands with the medical team. Here it stays on your device only.",
-      "bk.demo": "Demo mode · deposits are not charged. The full booking flow works client-side.",
+      "bk.demo": "Demo mode · deposits are not charged. Booking runs client-side.",
       "bk.step1": "1 · Service",
       "bk.step2": "2 · Date & time",
       "bk.step3": "3 · Deposit",
       "bk.service": "Choose a service",
       "bk.svc1": "Botox consultation",
+      "bk.svc1.s": "From ฿6,500 / area",
       "bk.svc2": "Filler consultation",
+      "bk.svc2.s": "From ฿12,900 / cc",
       "bk.svc3": "Skin quality consult",
+      "bk.svc3.s": "From ฿3,900",
       "bk.date": "Next 7 days",
       "bk.time": "Available times",
       "bk.next": "Continue",
@@ -128,7 +133,8 @@
       "chat.chip3": "Consult"
     },
     th: {
-      "brand.name": "พราวคลินิก",
+      "brand.mark": "พราว",
+      "brand.clinic": "คลินิก",
       "brand.sub": "เวชศาสตร์ความงาม · ทองหล่อ",
       "nav.treatments": "ทรีตเมนต์",
       "nav.results": "ผลลัพธ์",
@@ -137,13 +143,14 @@
       "nav.book": "จองคิวเลย",
       "ribbon": "เดโม่ · สร้างโดย Mikaro Studio ใน 48 ชม.",
       "ribbon.href": "https://mikaro.studio/th/business",
-      "hero.title": "ผิวพราว ดูแลอย่างงานฝีมือ",
+      "hero.title": "ผิวพราว ดูแลอย่าง<em class=\"ital\">งานฝีมือ</em>",
       "hero.lede": "โบท็อกซ์ ฟิลเลอร์ และผิวสุขภาพดี วางแผนโดยแพทย์ จองได้ในหนึ่งนาที",
-      "hero.chip": "★ 4.9 · รีวิว 128 รายการ",
+      "hero.chip": "4.9 · รีวิว Google 128 รายการ",
+      "hero.float": "จองได้ใน 1 นาที",
       "hero.cta1": "จองคิวเลย",
       "hero.cta2": "ปรึกษาฟรี",
       "sig.eyebrow": "ทรีตเมนต์ซิกเนเจอร์",
-      "sig.title": "จุดเริ่มชัดเจน วางแผนโดยแพทย์",
+      "sig.title": "จุดเริ่มชัดเจน วางแผนโดย<em class=\"ital\">แพทย์</em>",
       "sig.lede": "ทุกครั้งเริ่มจากปรึกษาแพทย์ฟรี ราคาด้านล่างคือราคาเริ่มต้นก่อนแผนส่วนตัว",
       "t1.name": "โบท็อกซ์",
       "t1.price": "เริ่ม 6,500.- ต่อจุด",
@@ -153,7 +160,7 @@
       "t3.price": "บูสเตอร์ + ปิโก เริ่ม 3,900.-",
       "more": "ดูรายละเอียด",
       "ba.eyebrow": "ผลลัพธ์",
-      "ba.title": "พื้นผิวที่เปรียบเทียบได้",
+      "ba.title": "พื้นผิวที่<em class=\"ital\">เปรียบเทียบ</em>ได้",
       "ba.lede": "ลากแฮนเดิล ภาพครอปพื้นผิวเท่านั้น · ผลลัพธ์ขึ้นอยู่กับแต่ละบุคคล",
       "ba.before": "ก่อน",
       "ba.after": "หลัง",
@@ -166,10 +173,10 @@
       "ba.cap6": "ปิโก + บูสเตอร์ · 4 สัปดาห์",
       "ba.note": "ผลลัพธ์ขึ้นอยู่กับแต่ละบุคคล",
       "doc.eyebrow": "การดูแลโดยแพทย์",
-      "doc.title": "ดูแลโดยแพทย์เวชศาสตร์ความงาม ประสบการณ์ 12 ปี",
+      "doc.title": "ดูแลโดยแพทย์เวชศาสตร์ความงาม ประสบการณ์ 12 <em class=\"ital\">ปี</em>",
       "doc.lede": "แผนการรักษาวางร่วมกันที่คลินิก เดโม่นี้ไม่ใช้ชื่อหรือรูปแพทย์สมมติ เพื่อโฟกัสที่กระบวนการและราคาที่ชัดเจน",
       "rev.eyebrow": "เสียงจากผู้มารับบริการ",
-      "rev.title": "ข้อความสั้น ๆ จากผู้มารับบริการล่าสุด",
+      "rev.title": "ข้อความสั้น ๆ จากผู้มารับบริการ<em class=\"ital\">ล่าสุด</em>",
       "rev1": "จองออนไลน์วันอังคาร มัดจำล็อกคิวได้ และปรึกษาแพทย์ไม่เร่งรีบ",
       "rev1.who": "น. · สุขุมวิท",
       "rev2": "ถามราคาฟิลเลอร์ในแชท แล้วส่งรูปผ่านฟอร์มปรึกษาฟรีคืนเดียวกัน",
@@ -210,7 +217,7 @@
       "tx.meta.down": "Downtime",
       "tx.meta.price": "ราคาเริ่มต้น",
       "tx.note": "ทุกแผนการรักษาเริ่มจากปรึกษาแพทย์ฟรี",
-      "cf.demo": "โหมดเดโม่ · ไม่มีการส่งข้อมูลไปคลินิกจริง ฟอร์มทำงานในเบราว์เซอร์เพื่อให้ลองเส้นทางปรึกษาได้ครบ",
+      "cf.demo": "โหมดเดโม่ · ไม่ส่งข้อมูลไปคลินิกจริง ฟอร์มทำงานในเบราว์เซอร์",
       "cf.s1": "ส่งรูปและความกังวลของคุณ",
       "cf.s2": "แพทย์ประเมิน",
       "cf.s3": "รับแผนและราคาใน 24 ชม.",
@@ -223,14 +230,17 @@
       "cf.submit": "ส่งคำปรึกษา",
       "cf.ok.title": "ส่งแล้ว · แพทย์จะตอบภายใน 24 ชั่วโมง (โหมดเดโม่)",
       "cf.ok.text": "บนเว็บจริง ข้อมูลจะถึงทีมแพทย์ ที่นี่ข้อมูลอยู่บนเครื่องคุณเท่านั้น",
-      "bk.demo": "โหมดเดโม่ · ไม่มีการตัดมัดจำจริง ทั้งโฟลว์จองทำงานฝั่งเบราว์เซอร์",
+      "bk.demo": "โหมดเดโม่ · ไม่ตัดมัดจำจริง โฟลว์จองทำงานในเบราว์เซอร์",
       "bk.step1": "1 · บริการ",
       "bk.step2": "2 · วันและเวลา",
       "bk.step3": "3 · มัดจำ",
       "bk.service": "เลือกบริการ",
       "bk.svc1": "ปรึกษาโบท็อกซ์",
+      "bk.svc1.s": "เริ่ม 6,500.- / จุด",
       "bk.svc2": "ปรึกษาฟิลเลอร์",
+      "bk.svc2.s": "เริ่ม 12,900.- / ซีซี",
       "bk.svc3": "ปรึกษาผิวใส",
+      "bk.svc3.s": "เริ่ม 3,900.-",
       "bk.date": "7 วันข้างหน้า",
       "bk.time": "ช่วงเวลาว่าง",
       "bk.next": "ถัดไป",
@@ -339,7 +349,7 @@
   function initHeroCurtain() {
     var hero = document.querySelector(".hero");
     if (!hero) { return; }
-    var img = hero.querySelector("img");
+    var img = hero.querySelector(".hero-arch img") || hero.querySelector("img");
     function ready() { hero.classList.add("is-ready"); }
     if (img && img.complete) {
       window.setTimeout(ready, 80);
@@ -481,13 +491,15 @@
         markers[m].classList.toggle("on", state.step >= n);
       }
 
-      var svcSel = root.querySelector("#bk-service");
-      if (svcSel) {
+      var svcCards = root.querySelector("#bk-services");
+      if (svcCards) {
         var html = "";
         for (var s = 0; s < services.length; s++) {
-          html += '<option value="' + s + '"' + (state.service === s ? " selected" : "") + ">" + t(services[s]) + "</option>";
+          html += '<button type="button" class="service-card' + (state.service === s ? " on" : "") +
+            '" data-service="' + s + '"><strong>' + t(services[s]) + "</strong><span>" +
+            t(services[s] + ".s") + "</span></button>";
         }
-        svcSel.innerHTML = html;
+        svcCards.innerHTML = html;
       }
 
       var days = root.querySelector("#bk-days");
@@ -539,15 +551,14 @@
       }
     }
 
-    root.addEventListener("change", function (e) {
-      if (e.target && e.target.id === "bk-service") {
-        state.service = parseInt(e.target.value, 10) || 0;
-      }
-    });
-
     root.addEventListener("click", function (e) {
       var el = e.target.closest("button");
       if (!el) { return; }
+      if (el.hasAttribute("data-service")) {
+        state.service = parseInt(el.getAttribute("data-service"), 10) || 0;
+        render();
+        return;
+      }
       if (el.hasAttribute("data-day")) {
         state.dayIndex = parseInt(el.getAttribute("data-day"), 10);
         state.slot = null;
@@ -584,14 +595,21 @@
   }
 
   function injectRibbon() {
-    if (document.querySelector(".demo-ribbon")) { return; }
-    var a = document.createElement("a");
-    a.className = "demo-ribbon";
+    var existing = document.querySelectorAll(".demo-ribbon");
+    if (existing.length > 1) {
+      for (var i = 1; i < existing.length; i++) { existing[i].remove(); }
+    }
+    var a = existing[0];
+    if (!a) {
+      a = document.createElement("a");
+      a.className = "demo-ribbon";
+      a.id = "praow-demo-ribbon";
+      a.target = "_blank";
+      a.rel = "noopener";
+      document.body.appendChild(a);
+    }
     a.href = t("ribbon.href");
-    a.target = "_blank";
-    a.rel = "noopener";
     a.textContent = t("ribbon");
-    document.body.appendChild(a);
   }
 
   document.addEventListener("DOMContentLoaded", function () {
