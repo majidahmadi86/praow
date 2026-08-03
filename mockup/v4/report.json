@@ -1,0 +1,28 @@
+{
+  "base": "https://praow.mikaro.studio",
+  "build": {
+    "meta": "praow-v4-ccd5cc3",
+    "data": "praow-v4-ccd5cc3"
+  },
+  "shots": [
+    "logo-lockup.png",
+    "palette-after-footer.png",
+    "palette-after-buttons.png",
+    "hero-1440-en.png",
+    "hero-390-en.png",
+    "hero-360-en.png",
+    "hero-1440-th.png",
+    "hero-390-th.png",
+    "hero-360-th.png",
+    "hero-load-frame-01.png",
+    "hero-load-frame-02.png",
+    "hero-load-frame-03.png",
+    "hero-load-frame-04.png",
+    "hero-load-frame-05.png",
+    "hero-load-frame-06.png",
+    "ticket-en.png",
+    "ticket-th.png",
+    "footer-fan.png"
+  ],
+  "lh": []
+}
