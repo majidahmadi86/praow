@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://praow.mikaro.studio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://praow.mikaro.studio/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://praow.mikaro.studio/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://praow.mikaro.studio/treatments</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://praow.mikaro.studio/treatments"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://praow.mikaro.studio/treatments"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://praow.mikaro.studio/results</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://praow.mikaro.studio/results"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://praow.mikaro.studio/results"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://praow.mikaro.studio/consult</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://praow.mikaro.studio/consult"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://praow.mikaro.studio/consult"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://praow.mikaro.studio/booking</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://praow.mikaro.studio/booking"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://praow.mikaro.studio/booking"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

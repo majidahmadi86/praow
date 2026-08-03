@@ -3,10 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="praow-build" content="praow-v4-679eb7e">
-  <title>Book · PRAOW CLINIC</title>
-  <meta name="description" content="Book a visit and lock your slot with a ฿500 deposit.">
+  <meta name="praow-build" content="praow-v5">
+  <title>PRAOW CLINIC · Book online · 500 THB deposit</title>
+  <meta name="description" content="Book Botox, filler or skin quality at PRAOW Thonglor. Pick a slot and lock it with a 500 THB deposit deducted from treatment.">
+  <meta name="praow-page" content="booking">
+  <link rel="canonical" href="https://praow.mikaro.studio/booking">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://praow.mikaro.studio/booking">
+  <meta property="og:title" content="PRAOW CLINIC · Book online · 500 THB deposit">
+  <meta property="og:description" content="Book Botox, filler or skin quality at PRAOW Thonglor. Pick a slot and lock it with a 500 THB deposit deducted from treatment.">
+  <meta property="og:image" content="https://praow.mikaro.studio/images/opt/hero-v4.jpg">
+  <meta property="og:locale" content="en_TH">
+  <meta property="og:locale:alternate" content="th_TH">
+  <link rel="alternate" hreflang="en" href="https://praow.mikaro.studio/booking">
+  <link rel="alternate" hreflang="th" href="https://praow.mikaro.studio/booking">
+  <link rel="alternate" hreflang="x-default" href="https://praow.mikaro.studio/booking">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -21,7 +32,7 @@
     <div class="header-in">
       <a href="index.html" class="logo">
         <svg class="logo-fan" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" fill="none"><line x1="6" y1="26" x2="26" y2="26" stroke="#C08A6B" stroke-width="1" stroke-linecap="round"/><line class="fan-ray" data-ray="0" x1="16" y1="26" x2="8.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="1" x1="16" y1="26" x2="7.22" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="2" x1="16" y1="26" x2="8.22" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="3" x1="16" y1="26" x2="11.22" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="4" x1="16" y1="26" x2="16.00" y2="12.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="5" x1="16" y1="26" x2="20.78" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="6" x1="16" y1="26" x2="23.78" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="7" x1="16" y1="26" x2="24.78" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="8" x1="16" y1="26" x2="24.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/></svg>
-        <span class="logo-text"><span class="logo-mark" data-i18n="brand.mark">PRAOW</span><span class="logo-sub" data-i18n="brand.clinic">Clinic · Thonglor</span></span>
+        <span class="logo-text"><span class="logo-mark" data-brand-lockup="mark">PRAOW</span><span class="logo-sub" data-brand-lockup="clinic">CLINIC · THONGLOR</span></span>
       </a>
       <nav class="nav">
         <a class="nav-link" data-page="treatments" href="treatments.html" data-i18n="nav.treatments">Treatments</a>
@@ -30,19 +41,31 @@
         <a class="nav-link" data-page="booking" href="booking.html" data-i18n="nav.booking">Book</a>
         <div class="lang-toggle"><button type="button" data-lang="en" class="on">EN</button><button type="button" data-lang="th">ไทย</button></div>
         <a class="btn nav-book" href="booking.html" data-i18n="nav.book">Book now</a>
-        <button class="burger" type="button" aria-label="Menu"><span></span></button>
+        <button class="burger" type="button" aria-label="Open menu" aria-controls="site-drawer" aria-expanded="false"><span></span></button>
       </nav>
     </div>
   </header>
-  <div class="drawer">
-    <button class="close-x" type="button" aria-label="Close">&times;</button>
-    <a href="treatments.html" data-i18n="nav.treatments">Treatments</a>
-    <a href="results.html" data-i18n="nav.results">Results</a>
-    <a href="consult.html" data-i18n="nav.consult">Consult</a>
-    <a href="booking.html" data-i18n="nav.booking">Book</a>
-    <a class="btn" href="booking.html" data-i18n="nav.book">Book now</a>
-    <div class="lang-toggle"><button type="button" data-lang="en" class="on">EN</button><button type="button" data-lang="th">ไทย</button></div>
-  </div>
+  <div class="drawer-scrim" id="drawer-scrim" hidden></div>
+  <aside class="drawer" id="site-drawer" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+    <div class="drawer-top">
+      <span class="drawer-fan" aria-hidden="true"><svg class="logo-fan" viewBox="0 0 32 32" width="28" height="28" fill="none"><line x1="6" y1="26" x2="26" y2="26" stroke="#C08A6B" stroke-width="1" stroke-linecap="round"/><line class="fan-ray" data-ray="0" x1="16" y1="26" x2="8" y2="26" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="1" x1="16" y1="26" x2="7.22" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="2" x1="16" y1="26" x2="8.22" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="3" x1="16" y1="26" x2="11.22" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="4" x1="16" y1="26" x2="16" y2="12" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="5" x1="16" y1="26" x2="20.78" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="6" x1="16" y1="26" x2="23.78" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="7" x1="16" y1="26" x2="24.78" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="8" x1="16" y1="26" x2="24" y2="26" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+      <button class="close-x" type="button" aria-label="Close menu">&times;</button>
+    </div>
+    <nav class="drawer-nav">
+      <a class="drawer-link" data-page="treatments" href="treatments.html" data-i18n="nav.treatments">Treatments</a>
+      <a class="drawer-link" data-page="results" href="results.html" data-i18n="nav.results">Results</a>
+      <a class="drawer-link" data-page="consult" href="consult.html" data-i18n="nav.consult">Consult</a>
+      <a class="drawer-link" data-page="booking" href="booking.html" data-i18n="nav.booking">Book</a>
+    </nav>
+    <a class="btn drawer-book" href="booking.html" data-i18n="nav.book">Book now</a>
+    <div class="lang-toggle drawer-lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" class="on" aria-label="Switch to English">EN</button>
+      <button type="button" data-lang="th" aria-label="Switch to Thai">ไทย</button>
+    </div>
+    <p class="drawer-meta">THONGLOR · BANGKOK / ทองหล่อ · กรุงเทพฯ</p>
+    <p class="drawer-hours">10:00 · 20:00</p>
+  </aside>
+
   <main>
     <section class="page-hero page-compose" style="padding-bottom:8px">
       <div class="wrap">
@@ -140,14 +163,14 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <div class="logo"><svg class="logo-fan footer-fan" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" fill="none"><line x1="6" y1="26" x2="26" y2="26" stroke="#C08A6B" stroke-width="1" stroke-linecap="round"/><line class="fan-ray" data-ray="0" x1="16" y1="26" x2="8.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="1" x1="16" y1="26" x2="7.22" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="2" x1="16" y1="26" x2="8.22" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="3" x1="16" y1="26" x2="11.22" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="4" x1="16" y1="26" x2="16.00" y2="12.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="5" x1="16" y1="26" x2="20.78" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="6" x1="16" y1="26" x2="23.78" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="7" x1="16" y1="26" x2="24.78" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="8" x1="16" y1="26" x2="24.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/></svg><span class="logo-text"><span class="logo-mark" data-i18n="brand.mark">PRAOW</span><span class="logo-sub" data-i18n="brand.clinic">Clinic · Thonglor</span></span></div>
+        <div class="logo"><svg class="logo-fan footer-fan" viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" fill="none"><line x1="6" y1="26" x2="26" y2="26" stroke="#C08A6B" stroke-width="1" stroke-linecap="round"/><line class="fan-ray" data-ray="0" x1="16" y1="26" x2="8.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="1" x1="16" y1="26" x2="7.22" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="2" x1="16" y1="26" x2="8.22" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="3" x1="16" y1="26" x2="11.22" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="4" x1="16" y1="26" x2="16.00" y2="12.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="5" x1="16" y1="26" x2="20.78" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="6" x1="16" y1="26" x2="23.78" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="7" x1="16" y1="26" x2="24.78" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/><line class="fan-ray" data-ray="8" x1="16" y1="26" x2="24.00" y2="26.00" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/></svg><span class="logo-text"><span class="logo-mark" data-brand-lockup="mark">PRAOW</span><span class="logo-sub" data-brand-lockup="clinic">CLINIC · THONGLOR</span></span></div>
         <p data-i18n="foot.tag">Aesthetic medicine in Thonglor. Planned by doctors, booked in one minute.</p>
       </div>
-      <div><h4 data-i18n="foot.pages">Pages</h4><a href="treatments.html" data-i18n="nav.treatments">Treatments</a><a href="results.html" data-i18n="nav.results">Results</a><a href="consult.html" data-i18n="nav.consult">Consult</a><a href="booking.html" data-i18n="nav.booking">Book</a></div>
-      <div><h4 data-i18n="foot.visit">Visit</h4><ul><li data-i18n="foot.addr">88 Sukhumvit 55, Khlong Tan Nuea, Watthana, Bangkok</li><li data-i18n="foot.hours">Daily 10:00 · 20:00</li>
+      <div><p class="footer-heading" data-i18n="foot.pages">Pages</p><a href="treatments.html" data-i18n="nav.treatments">Treatments</a><a href="results.html" data-i18n="nav.results">Results</a><a href="consult.html" data-i18n="nav.consult">Consult</a><a href="booking.html" data-i18n="nav.booking">Book</a></div>
+      <div><p class="footer-heading" data-i18n="foot.visit">Visit</p><ul><li data-i18n="foot.addr">88 Sukhumvit 55, Khlong Tan Nuea, Watthana, Bangkok</li><li data-i18n="foot.hours">Daily 10:00 · 20:00</li>
           <li><a class="btn ghost" style="margin-top:10px" href="https://line.me/" target="_blank" rel="noopener" data-i18n="foot.line">Chat on LINE</a></li></ul></div>
     </div>
-    <div class="wrap footer-legal"><span data-i18n="foot.legal">Demo preview by Mikaro Studio</span> · <a href="https://mikaro.studio" target="_blank" rel="noopener">mikaro.studio</a></div>
+    <div class="wrap footer-legal"><span data-i18n="foot.legal">Demo preview by Mikaro Studio</span> · <a href="https://mikaro.studio" target="_blank" rel="noopener" class="footer-studio-link" aria-label="Mikaro Studio website">mikaro.studio</a></div>
   </footer>
   <script src="js/app.js"></script>
   <script src="js/chat.js" defer></script>

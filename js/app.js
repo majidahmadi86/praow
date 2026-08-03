@@ -2,7 +2,7 @@
 (function () {
   "use strict";
 
-  var PRAOW_BUILD = "praow-v4-679eb7e";
+  var PRAOW_BUILD = "praow-v5";
   try {
     document.documentElement.setAttribute("data-praow-build", PRAOW_BUILD);
     var meta = document.querySelector('meta[name="praow-build"]');
@@ -22,7 +22,7 @@
   var dict = {
     en: {
       "brand.mark": "PRAOW",
-      "brand.clinic": "Clinic · Thonglor",
+      "brand.clinic": "CLINIC · THONGLOR",
       "brand.sub": "Aesthetic Medicine · Thonglor",
       "nav.treatments": "Treatments",
       "nav.results": "Results",
@@ -170,11 +170,41 @@
       "chat.ph": "Ask about treatments…",
       "chat.chip1": "Prices",
       "chat.chip2": "Book",
-      "chat.chip3": "Consult"
+      "chat.chip3": "Consult",
+      "seo.home.title": "PRAOW CLINIC · Aesthetic medicine in Thonglor, Bangkok",
+      "seo.home.desc": "Botox, fillers and skin quality planned by doctors. Free consultation, online booking with a 500 THB deposit. Thonglor, Bangkok.",
+      "seo.treatments.title": "PRAOW CLINIC · Treatments · Botox, filler and skin quality",
+      "seo.treatments.desc": "Clear from-prices for Botox, filler and skin quality at PRAOW in Thonglor. Session time and downtime explained before you book.",
+      "seo.results.title": "PRAOW CLINIC · Before and after results · Thonglor",
+      "seo.results.desc": "Compare skin-texture before and after crops from Botox, filler and skin quality treatments. Results vary by individual.",
+      "seo.consult.title": "PRAOW CLINIC · Free consultation · Doctor plan in 24h",
+      "seo.consult.desc": "Send a photo and your concern. A PRAOW doctor reviews and returns a plan with pricing within 24 hours. Thonglor, Bangkok.",
+      "seo.booking.title": "PRAOW CLINIC · Book online · 500 THB deposit",
+      "seo.booking.desc": "Book Botox, filler or skin quality at PRAOW Thonglor. Pick a slot and lock it with a 500 THB deposit deducted from treatment.",
+      "alt.hero": "Warm neutral clinical-calm beauty portrait",
+      "alt.botox": "Temple and brow portrait crop",
+      "alt.filler": "Lips and cheek portrait crop",
+      "alt.skin": "Glowing bare-skin cheek macro",
+      "alt.interior": "Calm wood and linen consult room",
+      "ba.alt1.b": "Botox result, before",
+      "ba.alt1.a": "Botox result, after",
+      "ba.alt2.b": "Filler result, before",
+      "ba.alt2.a": "Filler result, after",
+      "ba.alt3.b": "Skin booster result, before",
+      "ba.alt3.a": "Skin booster result, after",
+      "ba.alt4.b": "Botox result, before",
+      "ba.alt4.a": "Botox result, after",
+      "ba.alt5.b": "Filler result, before",
+      "ba.alt5.a": "Filler result, after",
+      "ba.alt6.b": "Skin quality result, before",
+      "ba.alt6.a": "Skin quality result, after",
+      "a11y.ba": "Compare before and after",
+      "a11y.menu": "Open menu",
+      "a11y.close": "Close menu"
     },
     th: {
-      "brand.mark": "พราว",
-      "brand.clinic": "คลินิก · ทองหล่อ",
+      "brand.mark": "PRAOW",
+      "brand.clinic": "CLINIC · THONGLOR",
       "brand.sub": "เวชศาสตร์ความงาม · ทองหล่อ",
       "nav.treatments": "ทรีตเมนต์",
       "nav.results": "ผลลัพธ์",
@@ -322,7 +352,37 @@
       "chat.ph": "ถามเกี่ยวกับทรีตเมนต์…",
       "chat.chip1": "ราคา",
       "chat.chip2": "จองคิว",
-      "chat.chip3": "ปรึกษาฟรี"
+      "chat.chip3": "ปรึกษาฟรี",
+      "seo.home.title": "พราวคลินิก · เวชศาสตร์ความงาม ทองหล่อ",
+      "seo.home.desc": "โบท็อกซ์ ฟิลเลอร์ และผิวสุขภาพดี วางแผนโดยแพทย์ ปรึกษาฟรี จองออนไลน์ มัดจำ 500 บาท ทองหล่อ กรุงเทพฯ",
+      "seo.treatments.title": "พราวคลินิก · ทรีตเมนต์ · โบท็อกซ์ ฟิลเลอร์ ผิวใส",
+      "seo.treatments.desc": "ราคาเริ่มต้นชัดเจนสำหรับโบท็อกซ์ ฟิลเลอร์ และผิวใส ที่พราวคลินิก ทองหล่อ อธิบายเวลาและ downtime ก่อนจอง",
+      "seo.results.title": "พราวคลินิก · ผลลัพธ์ก่อน-หลัง · ทองหล่อ",
+      "seo.results.desc": "เปรียบเทียบพื้นผิวก่อนและหลังจากโบท็อกซ์ ฟิลเลอร์ และผิวใส ผลลัพธ์ขึ้นกับแต่ละบุคคล",
+      "seo.consult.title": "พราวคลินิก · ปรึกษาฟรี · รับแผนจากแพทย์ใน 24 ชม.",
+      "seo.consult.desc": "ส่งรูปและความกังวล แพทย์พราวประเมินแล้วส่งแผนพร้อมราคาภายใน 24 ชั่วโมง ทองหล่อ กรุงเทพฯ",
+      "seo.booking.title": "พราวคลินิก · จองออนไลน์ · มัดจำ 500 บาท",
+      "seo.booking.desc": "จองโบท็อกซ์ ฟิลเลอร์ หรือผิวใส ที่พราว ทองหล่อ เลือกคิวแล้วล็อกด้วยมัดจำ 500 บาท หักจากค่าบริการ",
+      "alt.hero": "ภาพพอร์ตเทรตโทนอุ่น บรรยากาศคลินิกสงบ",
+      "alt.botox": "ภาพครอปขมับและคิ้ว",
+      "alt.filler": "ภาพครอปริมฝีปากและแก้ม",
+      "alt.skin": "ภาพมาโครผิวเปลือยเรืองแสง",
+      "alt.interior": "ห้องปรึกษาไม้และผ้าลินินโทนสงบ",
+      "ba.alt1.b": "ผลโบท็อกซ์ ก่อน",
+      "ba.alt1.a": "ผลโบท็อกซ์ หลัง",
+      "ba.alt2.b": "ผลฟิลเลอร์ ก่อน",
+      "ba.alt2.a": "ผลฟิลเลอร์ หลัง",
+      "ba.alt3.b": "ผลบูสเตอร์ผิว ก่อน",
+      "ba.alt3.a": "ผลบูสเตอร์ผิว หลัง",
+      "ba.alt4.b": "ผลโบท็อกซ์ ก่อน",
+      "ba.alt4.a": "ผลโบท็อกซ์ หลัง",
+      "ba.alt5.b": "ผลฟิลเลอร์ ก่อน",
+      "ba.alt5.a": "ผลฟิลเลอร์ หลัง",
+      "ba.alt6.b": "ผลผิวใส ก่อน",
+      "ba.alt6.a": "ผลผิวใส หลัง",
+      "a11y.ba": "เปรียบเทียบก่อนและหลัง",
+      "a11y.menu": "เปิดเมนู",
+      "a11y.close": "ปิดเมนู"
     }
   };
 
@@ -332,6 +392,41 @@
 
   function t(key) {
     return (dict[lang] && dict[lang][key]) || dict.en[key] || key;
+  }
+
+  function applySeoMeta() {
+    var page = document.querySelector('meta[name="praow-page"]');
+    var key = page ? page.getAttribute("content") : "home";
+    var title = t("seo." + key + ".title");
+    var desc = t("seo." + key + ".desc");
+    if (title && title.indexOf("seo.") !== 0) {
+      document.title = title;
+      var md = document.querySelector('meta[name="description"]');
+      if (md) { md.setAttribute("content", desc); }
+      var ogt = document.querySelector('meta[property="og:title"]');
+      if (ogt) { ogt.setAttribute("content", title); }
+      var ogd = document.querySelector('meta[property="og:description"]');
+      if (ogd) { ogd.setAttribute("content", desc); }
+      var ogl = document.querySelector('meta[property="og:locale"]');
+      if (ogl) { ogl.setAttribute("content", lang === "th" ? "th_TH" : "en_TH"); }
+    }
+    var alts = document.querySelectorAll("[data-i18n-alt]");
+    for (var i = 0; i < alts.length; i++) {
+      alts[i].setAttribute("alt", t(alts[i].getAttribute("data-i18n-alt")));
+    }
+    // Force Latin lockup everywhere
+    var marks = document.querySelectorAll('[data-brand-lockup="mark"]');
+    for (var m = 0; m < marks.length; m++) { marks[m].textContent = "PRAOW"; }
+    var subs = document.querySelectorAll('[data-brand-lockup="clinic"]');
+    for (var s = 0; s < subs.length; s++) { subs[s].textContent = "CLINIC · THONGLOR"; }
+    var burger = document.querySelector(".burger");
+    if (burger) { burger.setAttribute("aria-label", t("a11y.menu")); }
+    var close = document.querySelector(".drawer .close-x");
+    if (close) { close.setAttribute("aria-label", t("a11y.close")); }
+    var handles = document.querySelectorAll(".ba-handle");
+    for (var h = 0; h < handles.length; h++) {
+      handles[h].setAttribute("aria-label", t("a11y.ba"));
+    }
   }
 
   function applyLang() {
@@ -352,10 +447,10 @@
     var ribbon = document.querySelector(".demo-ribbon");
     if (ribbon) {
       ribbon.setAttribute("href", t("ribbon.href"));
-      var span = ribbon.querySelector("span");
+      var span = ribbon.querySelector("span:not(.ribbon-48)");
       if (span) { span.textContent = t("ribbon"); }
-      else { ribbon.innerHTML = FAN_SVG.replace('width="30" height="30"', 'width="14" height="14"') + "<span>" + t("ribbon") + "</span>"; }
     }
+    applySeoMeta();
     document.dispatchEvent(new CustomEvent("praow:lang", { detail: { lang: lang, t: t } }));
   }
 
@@ -380,16 +475,72 @@
   function initDrawer() {
     var burger = document.querySelector(".burger");
     var drawer = document.querySelector(".drawer");
+    var scrim = document.querySelector(".drawer-scrim");
     if (!burger || !drawer) { return; }
-    burger.addEventListener("click", function () { drawer.classList.add("open"); });
+
+    var startX = 0;
+    var tracking = false;
+
+    function openDrawer() {
+      drawer.hidden = false;
+      if (scrim) { scrim.hidden = false; }
+      requestAnimationFrame(function () {
+        drawer.classList.add("open");
+        if (scrim) { scrim.classList.add("open"); }
+      });
+      burger.setAttribute("aria-expanded", "true");
+      document.body.classList.add("drawer-lock");
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove("open");
+      if (scrim) { scrim.classList.remove("open"); }
+      burger.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("drawer-lock");
+      window.setTimeout(function () {
+        if (!drawer.classList.contains("open")) {
+          drawer.hidden = true;
+          if (scrim) { scrim.hidden = true; }
+        }
+      }, 450);
+    }
+
+    burger.addEventListener("click", function () {
+      if (drawer.classList.contains("open")) { closeDrawer(); }
+      else { openDrawer(); }
+    });
     var close = drawer.querySelector(".close-x");
     if (close) {
-      close.addEventListener("click", function () { drawer.classList.remove("open"); });
+      close.addEventListener("click", function (e) {
+        e.stopPropagation();
+        closeDrawer();
+      });
     }
-    var links = drawer.querySelectorAll("a, button");
-    for (var i = 0; i < links.length; i++) {
-      links[i].addEventListener("click", function () { drawer.classList.remove("open"); });
+    if (scrim) {
+      scrim.addEventListener("click", closeDrawer);
     }
+    var navLinks = drawer.querySelectorAll(".drawer-link, .drawer-book");
+    for (var i = 0; i < navLinks.length; i++) {
+      navLinks[i].addEventListener("click", closeDrawer);
+    }
+    // lang toggle inside drawer should NOT close on click of buttons - keep open
+    drawer.addEventListener("touchstart", function (e) {
+      if (!drawer.classList.contains("open")) { return; }
+      startX = e.touches[0].clientX;
+      tracking = true;
+    }, { passive: true });
+    drawer.addEventListener("touchmove", function (e) {
+      if (!tracking) { return; }
+      var dx = e.touches[0].clientX - startX;
+      if (dx > 70) {
+        tracking = false;
+        closeDrawer();
+      }
+    }, { passive: true });
+    drawer.addEventListener("touchend", function () { tracking = false; });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && drawer.classList.contains("open")) { closeDrawer(); }
+    });
   }
 
   function initReveals() {
@@ -520,13 +671,15 @@
           var rect = root.getBoundingClientRect();
           var x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
           var pct = (x / rect.width) * 100;
-          if (wrap) { wrap.style.width = pct + "%"; }
-          if (handle) { handle.style.left = pct + "%"; }
+          setPct(pct);
         }
 
         function setPct(pct) {
           if (wrap) { wrap.style.width = pct + "%"; }
-          if (handle) { handle.style.left = pct + "%"; }
+          if (handle) {
+            handle.style.left = pct + "%";
+            handle.setAttribute("aria-valuenow", String(Math.round(pct)));
+          }
         }
 
         size();
@@ -547,6 +700,14 @@
         function end() {
           dragging = false;
           root.classList.remove("dragging");
+        }
+
+        if (handle) {
+          handle.addEventListener("keydown", function (e) {
+            var now = parseFloat(handle.getAttribute("aria-valuenow") || "50");
+            if (e.key === "ArrowLeft") { setPct(Math.max(0, now - 5)); e.preventDefault(); }
+            if (e.key === "ArrowRight") { setPct(Math.min(100, now + 5)); e.preventDefault(); }
+          });
         }
 
         root.addEventListener("mousedown", start);
@@ -831,7 +992,21 @@
       document.body.appendChild(a);
     }
     a.href = t("ribbon.href");
-    a.innerHTML = FAN_SVG.replace('width="30" height="30"', 'width="14" height="14"') + "<span>" + t("ribbon") + "</span>";
+    a.setAttribute("aria-label", t("ribbon"));
+    a.innerHTML = FAN_SVG.replace('width="30" height="30"', 'width="14" height="14"') +
+      "<span>" + t("ribbon") + "</span><span class=\"ribbon-48\" aria-hidden=\"true\">48h</span>";
+
+    var expandTimer = null;
+    a.addEventListener("click", function (e) {
+      if (window.matchMedia("(max-width: 640px)").matches && !a.classList.contains("is-expanded")) {
+        e.preventDefault();
+        a.classList.add("is-expanded");
+        if (expandTimer) { window.clearTimeout(expandTimer); }
+        expandTimer = window.setTimeout(function () {
+          a.classList.remove("is-expanded");
+        }, 4000);
+      }
+    });
   }
 
   document.addEventListener("DOMContentLoaded", function () {
