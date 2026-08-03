@@ -2,7 +2,7 @@ import { chromium } from "playwright";
 import { mkdir } from "fs/promises";
 import path from "path";
 
-const BASE = process.env.RAVEE_URL || "https://ravee-preview.vercel.app";
+const BASE = process.env.PRAOW_URL || "https://praow-preview.vercel.app";
 const OUT = path.resolve("mockup");
 const pages = ["", "treatments", "results", "consult", "booking"];
 const langs = ["en", "th"];
@@ -10,7 +10,7 @@ const widths = [390, 1440];
 
 async function setLang(page, lang) {
   await page.addInitScript((l) => {
-    localStorage.setItem("ravee-lang", l);
+    localStorage.setItem("praow-lang", l);
   }, lang);
 }
 
@@ -72,7 +72,7 @@ async function main() {
     await page.goto(`${BASE}/consult`, { waitUntil: "networkidle" });
     await page.fill('textarea[name="concern"]', "อยากปรึกษาเรื่องผิวไม่เรียบ");
     await page.fill('input[name="name"]', "ทดสอบ");
-    await page.fill('input[name="line"]', "demo.ravee");
+    await page.fill('input[name="line"]', "demo.praow");
     await page.setInputFiles('input[type="file"]', path.resolve("images/skin-macro.jpg"));
     await page.waitForTimeout(400);
     await shot(page, "flow-consult-1-form-390.png");

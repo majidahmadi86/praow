@@ -1,4 +1,4 @@
-/* RAVEE CLINIC · aesthetic preview · Mikaro Studio */
+/* PRAOW CLINIC · aesthetic preview · Mikaro Studio */
 
 :root {
   --bone: #F7F4EF;
@@ -1035,7 +1035,7 @@ html[lang="th"] .demo-ribbon {
 
 /* ---------- chat widget ---------- */
 
-.ravee-fab {
+.praow-fab {
   position: fixed;
   right: 18px;
   bottom: 18px;
@@ -1050,9 +1050,9 @@ html[lang="th"] .demo-ribbon {
   box-shadow: 0 18px 40px rgba(166, 124, 70, 0.35);
   transition: transform 0.3s var(--ease);
 }
-.ravee-fab:hover { transform: translateY(-3px); }
-.ravee-fab svg { width: 24px; height: 24px; }
-.ravee-fab .pulse {
+.praow-fab:hover { transform: translateY(-3px); }
+.praow-fab svg { width: 24px; height: 24px; }
+.praow-fab .pulse {
   position: absolute;
   top: 6px;
   right: 6px;
@@ -1063,7 +1063,7 @@ html[lang="th"] .demo-ribbon {
   border: 2px solid #fff;
 }
 
-.ravee-panel {
+.praow-panel {
   position: fixed;
   right: 18px;
   bottom: 88px;
@@ -1078,7 +1078,7 @@ html[lang="th"] .demo-ribbon {
   border: 1px solid var(--line);
   box-shadow: 0 40px 90px rgba(28, 26, 23, 0.28);
 }
-.ravee-panel.open { display: flex; }
+.praow-panel.open { display: flex; }
 
 .chat { display: flex; flex-direction: column; height: 100%; }
 .chat-bar {
@@ -1236,8 +1236,8 @@ html[lang="th"] .demo-ribbon {
 @media (max-width: 420px) {
   .hero-cta .btn { width: 100%; }
   .demo-ribbon { left: 10px; bottom: 10px; font-size: 0.65rem; padding: 9px 12px; }
-  .ravee-fab { right: 12px; bottom: 12px; }
-  .ravee-panel { right: 12px; bottom: 78px; }
+  .praow-fab { right: 12px; bottom: 12px; }
+  .praow-panel { right: 12px; bottom: 78px; }
 }
 
 [data-step-marker].on{color:var(--ink);font-weight:500}

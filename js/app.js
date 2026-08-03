@@ -1,10 +1,10 @@
-/* RAVEE CLINIC · engine: i18n, reveals, booking, consult, BA · Mikaro Studio */
+/* PRAOW CLINIC · engine: i18n, reveals, booking, consult, BA · Mikaro Studio */
 (function () {
   "use strict";
 
   var dict = {
     en: {
-      "brand.name": "RAVEE CLINIC",
+      "brand.name": "PRAOW CLINIC",
       "brand.sub": "Aesthetic Medicine · Thonglor",
       "nav.treatments": "Treatments",
       "nav.results": "Results",
@@ -121,14 +121,14 @@
       "bk.ok.title": "Slot locked (demo)",
       "bk.ok.text": "Your deposit would lock this appointment on a live site. Nothing was charged here.",
       "bk.today": "Today",
-      "chat.hi": "Hello · I am the RAVEE CLINIC receptionist. Ask about prices, booking, or a free consult.",
+      "chat.hi": "Hello · I am the PRAOW CLINIC receptionist. Ask about prices, booking, or a free consult.",
       "chat.ph": "Ask about treatments…",
       "chat.chip1": "Prices",
       "chat.chip2": "Book",
       "chat.chip3": "Consult"
     },
     th: {
-      "brand.name": "รวีคลินิก",
+      "brand.name": "พราวคลินิก",
       "brand.sub": "เวชศาสตร์ความงาม · ทองหล่อ",
       "nav.treatments": "ทรีตเมนต์",
       "nav.results": "ผลลัพธ์",
@@ -137,7 +137,7 @@
       "nav.book": "จองคิวเลย",
       "ribbon": "เดโม่ · สร้างโดย Mikaro Studio ใน 48 ชม.",
       "ribbon.href": "https://mikaro.studio/th/business",
-      "hero.title": "ผิวของคุณ ดูแลอย่างงานฝีมือ",
+      "hero.title": "ผิวพราว ดูแลอย่างงานฝีมือ",
       "hero.lede": "โบท็อกซ์ ฟิลเลอร์ และผิวสุขภาพดี วางแผนโดยแพทย์ จองได้ในหนึ่งนาที",
       "hero.chip": "★ 4.9 · รีวิว 128 รายการ",
       "hero.cta1": "จองคิวเลย",
@@ -245,7 +245,7 @@
       "bk.ok.title": "ล็อกคิวแล้ว (เดโม่)",
       "bk.ok.text": "บนเว็บจริง มัดจำจะล็อกคิวนี้ ที่นี่ไม่มีการตัดเงิน",
       "bk.today": "วันนี้",
-      "chat.hi": "สวัสดีค่ะ · ฉันคือพนักงานต้อนรับ RAVEE CLINIC ถามเรื่องราคา จองคิว หรือปรึกษาฟรีได้เลย",
+      "chat.hi": "สวัสดีค่ะ · ฉันคือพนักงานต้อนรับ PRAOW CLINIC ถามเรื่องราคา จองคิว หรือปรึกษาฟรีได้เลย",
       "chat.ph": "ถามเกี่ยวกับทรีตเมนต์…",
       "chat.chip1": "ราคา",
       "chat.chip2": "จองคิว",
@@ -254,7 +254,7 @@
   };
 
   var lang = "en";
-  try { lang = window.localStorage.getItem("ravee-lang") || "en"; } catch (e) {}
+  try { lang = window.localStorage.getItem("praow-lang") || "en"; } catch (e) {}
   if (lang !== "en" && lang !== "th") { lang = "en"; }
 
   function t(key) {
@@ -281,15 +281,15 @@
       ribbon.textContent = t("ribbon");
       ribbon.setAttribute("href", t("ribbon.href"));
     }
-    document.dispatchEvent(new CustomEvent("ravee:lang", { detail: { lang: lang, t: t } }));
+    document.dispatchEvent(new CustomEvent("praow:lang", { detail: { lang: lang, t: t } }));
   }
 
   function setLang(next) {
     lang = next;
-    try { window.localStorage.setItem("ravee-lang", next); } catch (e) {}
+    try { window.localStorage.setItem("praow-lang", next); } catch (e) {}
     applyLang();
-    if (window.RaveeBooking && window.RaveeBooking.refresh) {
-      window.RaveeBooking.refresh();
+    if (window.PraowBooking && window.PraowBooking.refresh) {
+      window.PraowBooking.refresh();
     }
   }
 
@@ -579,7 +579,7 @@
       }
     });
 
-    window.RaveeBooking = { refresh: render };
+    window.PraowBooking = { refresh: render };
     render();
   }
 
@@ -621,7 +621,7 @@
     }
   });
 
-  window.RaveeI18n = {
+  window.PraowI18n = {
     t: t,
     getLang: function () { return lang; }
   };

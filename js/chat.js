@@ -1,4 +1,4 @@
-/* RAVEE CLINIC · AI receptionist widget · Mikaro Studio */
+/* PRAOW CLINIC · AI receptionist widget · Mikaro Studio */
 (function () {
   "use strict";
 
@@ -11,11 +11,11 @@
   }
 
   function lang() {
-    return (window.RaveeI18n && window.RaveeI18n.getLang()) || document.documentElement.lang || "en";
+    return (window.PraowI18n && window.PraowI18n.getLang()) || document.documentElement.lang || "en";
   }
 
   function tt(key) {
-    return (window.RaveeI18n && window.RaveeI18n.t(key)) || key;
+    return (window.PraowI18n && window.PraowI18n.t(key)) || key;
   }
 
   function localBrain(q) {
@@ -55,7 +55,7 @@
     var th = lang() === "th";
     root.innerHTML =
       '<div class="chat">' +
-      '<div class="chat-bar"><span class="av">R</span>RAVEE · receptionist<span class="on">online</span></div>' +
+      '<div class="chat-bar"><span class="av">P</span>PRAOW · receptionist<span class="on">online</span></div>' +
       '<div class="chat-log" aria-live="polite"></div>' +
       '<div class="chat-chips">' +
       '<button type="button" data-q="' + (th ? "ราคา" : "Prices") + '">' + tt("chat.chip1") + "</button>" +
@@ -94,7 +94,7 @@
     async function aiReply(q) {
       var t = add("bot typing", "<i></i><i></i><i></i>");
       try {
-        var r = await fetch("/api/ravee", {
+        var r = await fetch("/api/praow", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ messages: HIST })
@@ -138,17 +138,17 @@
 
   function boot() {
     if (document.body.hasAttribute("data-no-fab")) { return; }
-    if (document.querySelector(".ravee-fab")) { return; }
+    if (document.querySelector(".praow-fab")) { return; }
 
     var fab = document.createElement("button");
-    fab.className = "ravee-fab";
-    fab.setAttribute("aria-label", "Chat with RAVEE");
+    fab.className = "praow-fab";
+    fab.setAttribute("aria-label", "Chat with PRAOW");
     fab.innerHTML = ICON + '<span class="pulse"></span>';
 
     var panel = document.createElement("div");
-    panel.className = "ravee-panel";
+    panel.className = "praow-panel";
     panel.setAttribute("role", "dialog");
-    panel.setAttribute("aria-label", "RAVEE receptionist");
+    panel.setAttribute("aria-label", "PRAOW receptionist");
 
     document.body.appendChild(panel);
     document.body.appendChild(fab);
@@ -170,7 +170,7 @@
       if (e.key === "Escape") { panel.classList.remove("open"); }
     });
 
-    document.addEventListener("ravee:lang", function () {
+    document.addEventListener("praow:lang", function () {
       if (panel.classList.contains("open")) {
         panel.innerHTML = "";
         mount(panel);

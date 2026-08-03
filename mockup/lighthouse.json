@@ -1,9 +1,9 @@
 {
   "lighthouseVersion": "13.4.1",
-  "requestedUrl": "https://ravee-preview.vercel.app/",
-  "mainDocumentUrl": "https://ravee-preview.vercel.app/",
-  "finalDisplayedUrl": "https://ravee-preview.vercel.app/",
-  "finalUrl": "https://ravee-preview.vercel.app/",
+  "requestedUrl": "https://praow-preview.vercel.app/",
+  "mainDocumentUrl": "https://praow-preview.vercel.app/",
+  "finalDisplayedUrl": "https://praow-preview.vercel.app/",
+  "finalUrl": "https://praow-preview.vercel.app/",
   "fetchTime": "2026-08-03T04:32:05.906Z",
   "gatherMode": "navigation",
   "runWarnings": [
@@ -201,7 +201,7 @@
         ],
         "items": [
           {
-            "url": "https://ravee-preview.vercel.app/",
+            "url": "https://praow-preview.vercel.app/",
             "responseTime": 40
           }
         ],
@@ -382,7 +382,7 @@
         ],
         "items": [
           {
-            "url": "https://ravee-preview.vercel.app/",
+            "url": "https://praow-preview.vercel.app/",
             "total": 1306.568000000001,
             "scripting": 12.316,
             "scriptParseCompile": 0.7080000000000001
@@ -394,7 +394,7 @@
             "scriptParseCompile": 0
           },
           {
-            "url": "https://ravee-preview.vercel.app/js/app.js",
+            "url": "https://praow-preview.vercel.app/js/app.js",
             "total": 150.68,
             "scripting": 71.288,
             "scriptParseCompile": 8.424
@@ -503,7 +503,7 @@
         ],
         "items": [
           {
-            "url": "https://ravee-preview.vercel.app/",
+            "url": "https://praow-preview.vercel.app/",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -521,7 +521,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/images/opt/hero.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/hero.jpg",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -540,7 +540,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/fonts/fraunces-3.woff2",
+            "url": "https://praow-preview.vercel.app/fonts/fraunces-3.woff2",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -559,7 +559,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/fonts/prompt-5.woff2",
+            "url": "https://praow-preview.vercel.app/fonts/prompt-5.woff2",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -578,7 +578,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/fonts/fonts.css",
+            "url": "https://praow-preview.vercel.app/fonts/fonts.css",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -596,7 +596,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/css/style.css",
+            "url": "https://praow-preview.vercel.app/css/style.css",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -614,7 +614,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/images/opt/ba/skin1-after.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/ba/skin1-after.jpg",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -632,7 +632,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/images/opt/ba/skin1-before.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/ba/skin1-before.jpg",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -650,7 +650,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/js/app.js",
+            "url": "https://praow-preview.vercel.app/js/app.js",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -668,7 +668,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/js/chat.js",
+            "url": "https://praow-preview.vercel.app/js/chat.js",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -686,7 +686,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/fonts/prompt-8.woff2",
+            "url": "https://praow-preview.vercel.app/fonts/prompt-8.woff2",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -704,7 +704,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/fonts/prompt-12.woff2",
+            "url": "https://praow-preview.vercel.app/fonts/prompt-12.woff2",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -722,7 +722,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/fonts/prompt-16.woff2",
+            "url": "https://praow-preview.vercel.app/fonts/prompt-16.woff2",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -740,7 +740,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/fonts/prompt-9.woff2",
+            "url": "https://praow-preview.vercel.app/fonts/prompt-9.woff2",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -758,7 +758,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/images/opt/botox-card.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/botox-card.jpg",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -776,7 +776,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/images/opt/filler-card.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/filler-card.jpg",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -794,7 +794,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/images/opt/skin-card.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/skin-card.jpg",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -812,7 +812,7 @@
             "entity": "vercel.app"
           },
           {
-            "url": "https://ravee-preview.vercel.app/favicon.svg",
+            "url": "https://praow-preview.vercel.app/favicon.svg",
             "sessionTargetType": "page",
             "protocol": "h2",
             "cache": "none",
@@ -836,89 +836,89 @@
           "initiators": [
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/",
+              "url": "https://praow-preview.vercel.app/",
               "lineNumber": 9,
               "columnNumber": 83
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/",
+              "url": "https://praow-preview.vercel.app/",
               "lineNumber": 10,
               "columnNumber": 92
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/",
+              "url": "https://praow-preview.vercel.app/",
               "lineNumber": 11,
               "columnNumber": 90
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/",
+              "url": "https://praow-preview.vercel.app/",
               "lineNumber": 12,
               "columnNumber": 48
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/",
+              "url": "https://praow-preview.vercel.app/",
               "lineNumber": 13,
               "columnNumber": 46
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/",
+              "url": "https://praow-preview.vercel.app/",
               "lineNumber": 112,
               "columnNumber": 121
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/",
+              "url": "https://praow-preview.vercel.app/",
               "lineNumber": 114,
               "columnNumber": 108
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/",
+              "url": "https://praow-preview.vercel.app/",
               "lineNumber": 194,
               "columnNumber": 26
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/",
+              "url": "https://praow-preview.vercel.app/",
               "lineNumber": 195,
               "columnNumber": 33
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/fonts/fonts.css"
+              "url": "https://praow-preview.vercel.app/fonts/fonts.css"
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/fonts/fonts.css"
+              "url": "https://praow-preview.vercel.app/fonts/fonts.css"
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/fonts/fonts.css"
+              "url": "https://praow-preview.vercel.app/fonts/fonts.css"
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/fonts/fonts.css"
+              "url": "https://praow-preview.vercel.app/fonts/fonts.css"
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/",
+              "url": "https://praow-preview.vercel.app/",
               "lineNumber": 194,
               "columnNumber": 35
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/",
+              "url": "https://praow-preview.vercel.app/",
               "lineNumber": 194,
               "columnNumber": 35
             },
             {
               "type": "parser",
-              "url": "https://ravee-preview.vercel.app/",
+              "url": "https://praow-preview.vercel.app/",
               "lineNumber": 194,
               "columnNumber": 35
             }
@@ -952,7 +952,7 @@
         ],
         "items": [
           {
-            "origin": "https://ravee-preview.vercel.app",
+            "origin": "https://praow-preview.vercel.app",
             "rtt": 6.005000000000001
           }
         ],
@@ -987,7 +987,7 @@
         ],
         "items": [
           {
-            "origin": "https://ravee-preview.vercel.app",
+            "origin": "https://praow-preview.vercel.app",
             "serverResponseTime": 177.7945
           }
         ],
@@ -1256,14 +1256,14 @@
                 {
                   "extra": {
                     "type": "url",
-                    "value": "https://ravee-preview.vercel.app/fonts/prompt-8.woff2"
+                    "value": "https://praow-preview.vercel.app/fonts/prompt-8.woff2"
                   },
                   "cause": "Web font loaded"
                 },
                 {
                   "extra": {
                     "type": "url",
-                    "value": "https://ravee-preview.vercel.app/fonts/prompt-16.woff2"
+                    "value": "https://praow-preview.vercel.app/fonts/prompt-16.woff2"
                   },
                   "cause": "Web font loaded"
                 }
@@ -1294,7 +1294,7 @@
                 {
                   "extra": {
                     "type": "url",
-                    "value": "https://ravee-preview.vercel.app/fonts/prompt-9.woff2"
+                    "value": "https://praow-preview.vercel.app/fonts/prompt-9.woff2"
                   },
                   "cause": "Web font loaded"
                 }
@@ -1338,12 +1338,12 @@
         ],
         "items": [
           {
-            "url": "https://ravee-preview.vercel.app/",
+            "url": "https://praow-preview.vercel.app/",
             "duration": 363,
             "startTime": 1022.7945
           },
           {
-            "url": "https://ravee-preview.vercel.app/",
+            "url": "https://praow-preview.vercel.app/",
             "duration": 127,
             "startTime": 1385.7945
           },
@@ -1353,12 +1353,12 @@
             "startTime": 927.7945
           },
           {
-            "url": "https://ravee-preview.vercel.app/js/chat.js",
+            "url": "https://praow-preview.vercel.app/js/chat.js",
             "duration": 58,
             "startTime": 2918.7945
           },
           {
-            "url": "https://ravee-preview.vercel.app/",
+            "url": "https://praow-preview.vercel.app/",
             "duration": 51,
             "startTime": 1535.7945
           }
@@ -1372,9 +1372,9 @@
         "debugData": {
           "type": "debugdata",
           "urls": [
-            "https://ravee-preview.vercel.app/",
+            "https://praow-preview.vercel.app/",
             "Unattributable",
-            "https://ravee-preview.vercel.app/js/chat.js"
+            "https://praow-preview.vercel.app/js/chat.js"
           ],
           "tasks": [
             {
@@ -1485,13 +1485,13 @@
         "type": "treemap-data",
         "nodes": [
           {
-            "name": "https://ravee-preview.vercel.app/js/app.js",
+            "name": "https://praow-preview.vercel.app/js/app.js",
             "resourceBytes": 25549,
             "encodedBytes": 0,
             "unusedBytes": 6613
           },
           {
-            "name": "https://ravee-preview.vercel.app/js/chat.js",
+            "name": "https://praow-preview.vercel.app/js/chat.js",
             "resourceBytes": 7127,
             "encodedBytes": 0,
             "unusedBytes": 5686
@@ -1524,43 +1524,43 @@
         ],
         "items": [
           {
-            "url": "https://ravee-preview.vercel.app/images/opt/skin-card.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/skin-card.jpg",
             "totalBytes": 174776
           },
           {
-            "url": "https://ravee-preview.vercel.app/images/opt/hero.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/hero.jpg",
             "totalBytes": 116489
           },
           {
-            "url": "https://ravee-preview.vercel.app/fonts/fraunces-3.woff2",
+            "url": "https://praow-preview.vercel.app/fonts/fraunces-3.woff2",
             "totalBytes": 67471
           },
           {
-            "url": "https://ravee-preview.vercel.app/images/opt/ba/skin1-after.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/ba/skin1-after.jpg",
             "totalBytes": 56509
           },
           {
-            "url": "https://ravee-preview.vercel.app/images/opt/botox-card.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/botox-card.jpg",
             "totalBytes": 40297
           },
           {
-            "url": "https://ravee-preview.vercel.app/images/opt/filler-card.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/filler-card.jpg",
             "totalBytes": 40190
           },
           {
-            "url": "https://ravee-preview.vercel.app/images/opt/ba/skin1-before.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/ba/skin1-before.jpg",
             "totalBytes": 37323
           },
           {
-            "url": "https://ravee-preview.vercel.app/fonts/prompt-16.woff2",
+            "url": "https://praow-preview.vercel.app/fonts/prompt-16.woff2",
             "totalBytes": 18250
           },
           {
-            "url": "https://ravee-preview.vercel.app/fonts/prompt-12.woff2",
+            "url": "https://praow-preview.vercel.app/fonts/prompt-12.woff2",
             "totalBytes": 18246
           },
           {
-            "url": "https://ravee-preview.vercel.app/fonts/prompt-8.woff2",
+            "url": "https://praow-preview.vercel.app/fonts/prompt-8.woff2",
             "totalBytes": 18102
           }
         ],
@@ -1813,14 +1813,14 @@
                     {
                       "extra": {
                         "type": "url",
-                        "value": "https://ravee-preview.vercel.app/fonts/prompt-8.woff2"
+                        "value": "https://praow-preview.vercel.app/fonts/prompt-8.woff2"
                       },
                       "cause": "Web font"
                     },
                     {
                       "extra": {
                         "type": "url",
-                        "value": "https://ravee-preview.vercel.app/fonts/prompt-16.woff2"
+                        "value": "https://praow-preview.vercel.app/fonts/prompt-16.woff2"
                       },
                       "cause": "Web font"
                     }
@@ -1851,7 +1851,7 @@
                     {
                       "extra": {
                         "type": "url",
-                        "value": "https://ravee-preview.vercel.app/fonts/prompt-9.woff2"
+                        "value": "https://praow-preview.vercel.app/fonts/prompt-9.woff2"
                       },
                       "cause": "Web font"
                     }
@@ -2158,7 +2158,7 @@
               "snippet": "<img class=\"ba-after\" src=\"images/opt/ba/skin1-after.jpg\" alt=\"After skin texture\" width=\"800\" height=\"1000\">",
               "nodeLabel": "After skin texture"
             },
-            "url": "https://ravee-preview.vercel.app/images/opt/ba/skin1-after.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/ba/skin1-after.jpg",
             "totalBytes": 56341,
             "wastedBytes": 20620,
             "subItems": {
@@ -2188,7 +2188,7 @@
               "snippet": "<img src=\"images/opt/hero.jpg\" alt=\"Calm aesthetic treatment atmosphere\" fetchpriority=\"high\" width=\"1800\" height=\"1200\">",
               "nodeLabel": "Calm aesthetic treatment atmosphere"
             },
-            "url": "https://ravee-preview.vercel.app/images/opt/hero.jpg",
+            "url": "https://praow-preview.vercel.app/images/opt/hero.jpg",
             "totalBytes": 116281,
             "wastedBytes": 8336,
             "subItems": {
@@ -2425,38 +2425,38 @@
               "type": "network-tree",
               "chains": {
                 "233F1C2B354AAC67C1568639B632AE1B": {
-                  "url": "https://ravee-preview.vercel.app/",
+                  "url": "https://praow-preview.vercel.app/",
                   "navStartToEndTime": 409,
                   "transferSize": 3145,
                   "isLongest": true,
                   "children": {
                     "1420.5": {
-                      "url": "https://ravee-preview.vercel.app/fonts/fonts.css",
+                      "url": "https://praow-preview.vercel.app/fonts/fonts.css",
                       "navStartToEndTime": 564,
                       "transferSize": 730,
                       "isLongest": true,
                       "children": {
                         "1420.46": {
-                          "url": "https://ravee-preview.vercel.app/fonts/prompt-12.woff2",
+                          "url": "https://praow-preview.vercel.app/fonts/prompt-12.woff2",
                           "navStartToEndTime": 1165,
                           "transferSize": 18246,
                           "isLongest": true,
                           "children": {}
                         },
                         "1420.43": {
-                          "url": "https://ravee-preview.vercel.app/fonts/prompt-9.woff2",
+                          "url": "https://praow-preview.vercel.app/fonts/prompt-9.woff2",
                           "navStartToEndTime": 1132,
                           "transferSize": 13135,
                           "children": {}
                         },
                         "1420.50": {
-                          "url": "https://ravee-preview.vercel.app/fonts/prompt-16.woff2",
+                          "url": "https://praow-preview.vercel.app/fonts/prompt-16.woff2",
                           "navStartToEndTime": 1060,
                           "transferSize": 18250,
                           "children": {}
                         },
                         "1420.42": {
-                          "url": "https://ravee-preview.vercel.app/fonts/prompt-8.woff2",
+                          "url": "https://praow-preview.vercel.app/fonts/prompt-8.woff2",
                           "navStartToEndTime": 1052,
                           "transferSize": 18102,
                           "children": {}
@@ -2464,13 +2464,13 @@
                       }
                     },
                     "1420.10": {
-                      "url": "https://ravee-preview.vercel.app/js/app.js",
+                      "url": "https://praow-preview.vercel.app/js/app.js",
                       "navStartToEndTime": 759,
                       "transferSize": 9586,
                       "children": {}
                     },
                     "1420.6": {
-                      "url": "https://ravee-preview.vercel.app/css/style.css",
+                      "url": "https://praow-preview.vercel.app/css/style.css",
                       "navStartToEndTime": 566,
                       "transferSize": 6408,
                       "children": {}
@@ -2536,11 +2536,11 @@
         ],
         "items": [
           {
-            "url": "https://ravee-preview.vercel.app/css/style.css",
+            "url": "https://praow-preview.vercel.app/css/style.css",
             "totalBytes": 6408
           },
           {
-            "url": "https://ravee-preview.vercel.app/fonts/fonts.css",
+            "url": "https://praow-preview.vercel.app/fonts/fonts.css",
             "totalBytes": 730
           }
         ]
@@ -3035,7 +3035,7 @@
     {
       "name": "vercel.app",
       "origins": [
-        "https://ravee-preview.vercel.app"
+        "https://praow-preview.vercel.app"
       ],
       "isFirstParty": true,
       "isUnrecognized": true
