@@ -131,7 +131,7 @@ html[lang="th"] .title em {
   font-family: var(--font-thai);
   font-style: normal;
   font-weight: 600;
-  color: var(--bronze);
+  color: var(--ink);
 }
 
 .lede {
@@ -619,9 +619,9 @@ html[lang="th"] .hero-micro span {
 .hero-display .ital,
 .hero-display em {
   position: relative;
-  color: var(--bronze);
+  color: var(--ink);
   font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
 }
 .hero-display .ital::after,
 .hero-display em::after {
@@ -648,7 +648,7 @@ html[lang="th"] .hero-display .ital,
 html[lang="th"] .hero-display em {
   font-style: normal;
   font-weight: 600;
-  color: var(--bronze);
+  color: var(--ink);
 }
 
 .hero-copy .lede { margin-top: 14px; max-width: 28rem; }
@@ -1245,7 +1245,7 @@ html[lang="th"] .review .who {
   font-style: italic;
   font-size: 2.5rem;
   font-weight: 500;
-  color: var(--bronze);
+  color: var(--ink);
   line-height: 1;
   margin-bottom: 6px;
 }
@@ -1881,7 +1881,7 @@ html[lang="th"] .demo-ribbon {
 .chat-bar .on {
   margin-left: auto;
   font-size: 0.7rem;
-  color: var(--bronze);
+  color: var(--ink-soft);
   font-weight: 500;
 }
 .chat-log {
