@@ -7,6 +7,9 @@
   <title>Book · PRAOW CLINIC</title>
   <meta name="description" content="Book a visit and lock your slot with a ฿500 deposit.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preload" as="font" href="fonts/cormorant-2.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="fonts/manrope-6.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="fonts/anuphan-7.woff2" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,8 +18,8 @@
   <header class="site-header">
     <div class="header-in">
       <a href="index.html" class="logo">
-        <span class="logo-mark" data-i18n="brand.name">PRAOW CLINIC</span>
-        <span class="logo-sub" data-i18n="brand.sub">Aesthetic Medicine · Thonglor</span>
+        <span class="logo-mark" data-i18n="brand.mark">PRAOW</span>
+        <span class="logo-sub" data-i18n="brand.clinic">Clinic</span>
       </a>
       <nav class="nav">
         <a class="nav-link" data-page="treatments" href="treatments.html" data-i18n="nav.treatments">Treatments</a>
@@ -47,20 +50,16 @@
   </div>
 
   <main>
-    <section class="page-hero">
+    <section class="page-hero page-compose" style="padding-bottom:8px">
       <div class="wrap">
         <p class="eyebrow" data-i18n="nav.booking">Book</p>
         <h1 class="display" data-i18n="page.book.title">Book a visit</h1>
         <p class="lede" data-i18n="page.book.lede">Pick a service, choose a slot, then lock it with a ฿500 deposit.</p>
-      </div>
-    </section>
 
-    <section style="padding-top:8px">
-      <div class="wrap">
-        <div class="book-layout" id="booking-app">
+        <div class="book-layout" id="booking-app" style="margin-top:14px">
           <div class="demo-banner" data-i18n="bk.demo">Demo mode · deposits are not charged. The full booking flow works client-side.</div>
 
-          <div style="display:flex;gap:18px;flex-wrap:wrap;margin-bottom:8px;font-size:0.85rem;color:var(--ink-soft)">
+          <div class="book-steps">
             <span data-step-marker="1" data-i18n="bk.step1">1 · Service</span>
             <span data-step-marker="2" data-i18n="bk.step2">2 · Date &amp; time</span>
             <span data-step-marker="3" data-i18n="bk.step3">3 · Deposit</span>
@@ -69,10 +68,7 @@
           <div class="book-step on" data-step="1">
             <div class="book-panel">
               <h2 data-i18n="bk.service">Choose a service</h2>
-              <div class="field">
-                <label data-i18n="bk.service">Choose a service</label>
-                <select id="bk-service"></select>
-              </div>
+              <div class="service-cards" id="bk-services"></div>
               <div class="book-actions">
                 <span></span>
                 <button type="button" class="btn" data-to-step="2" data-i18n="bk.next">Continue</button>
@@ -123,9 +119,9 @@
             <div class="success-state show">
               <div class="ok">✦</div>
               <h3 data-i18n="bk.ok.title">Slot locked (demo)</h3>
-              <p class="book-summary" id="bk-ok-summary" style="display:inline-block;margin-top:16px"></p>
+              <p class="book-summary" id="bk-ok-summary" style="display:inline-block;margin-top:14px"></p>
               <p class="note" data-i18n="bk.ok.text">Your deposit would lock this appointment on a live site. Nothing was charged here.</p>
-              <a class="btn" style="margin-top:24px" href="index.html" data-i18n="brand.name">PRAOW CLINIC</a>
+              <a class="btn" style="margin-top:22px" href="index.html" data-i18n="brand.mark">PRAOW</a>
             </div>
           </div>
         </div>
@@ -136,8 +132,8 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <div class="logo-mark" data-i18n="brand.name">PRAOW CLINIC</div>
-        <div class="logo-sub" data-i18n="brand.sub">Aesthetic Medicine · Thonglor</div>
+        <div class="logo-mark" data-i18n="brand.mark">PRAOW</div>
+        <div class="logo-sub" data-i18n="brand.clinic">Clinic</div>
         <p data-i18n="foot.tag">Aesthetic medicine in Thonglor. Planned by doctors, booked in one minute.</p>
       </div>
       <div>

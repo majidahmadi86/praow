@@ -7,6 +7,9 @@
   <title>Treatments · PRAOW CLINIC</title>
   <meta name="description" content="Botox, filler and skin quality treatments with clear session time, downtime and from-prices.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preload" as="font" href="fonts/cormorant-2.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="fonts/manrope-6.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="fonts/anuphan-7.woff2" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,8 +18,8 @@
   <header class="site-header">
     <div class="header-in">
       <a href="index.html" class="logo">
-        <span class="logo-mark" data-i18n="brand.name">PRAOW CLINIC</span>
-        <span class="logo-sub" data-i18n="brand.sub">Aesthetic Medicine · Thonglor</span>
+        <span class="logo-mark" data-i18n="brand.mark">PRAOW</span>
+        <span class="logo-sub" data-i18n="brand.clinic">Clinic</span>
       </a>
       <nav class="nav">
         <a class="nav-link" data-page="treatments" href="treatments.html" data-i18n="nav.treatments">Treatments</a>
@@ -47,67 +50,83 @@
   </div>
 
   <main>
-    <section class="page-hero">
+    <section class="page-hero page-compose">
       <div class="wrap">
         <p class="eyebrow" data-i18n="sig.eyebrow">Signature treatments</p>
         <h1 class="display" data-i18n="page.treat.title">Treatments</h1>
         <p class="lede" data-i18n="page.treat.lede">Plain language on what each treatment does, how long it takes, and what downtime to expect.</p>
+
+        <div class="treat-page-grid">
+          <article class="treat-page-card" id="botox">
+            <div class="media"><img src="images/opt/botox-card.jpg" alt="Soft portrait lighting" width="900" height="1125"></div>
+            <h2 data-i18n="tx.botox.h">Botox</h2>
+            <p class="price" data-i18n="tx.botox.price">From ฿6,500 / area</p>
+            <p class="lede" data-i18n="tx.botox.p">Softens dynamic lines by easing selected facial muscles. Areas and units are decided with the doctor after assessment.</p>
+            <div class="actions">
+              <a class="btn" href="consult.html" data-i18n="hero.cta2">Free consultation</a>
+              <a class="btn ghost" href="booking.html" data-i18n="hero.cta1">Book now</a>
+            </div>
+          </article>
+          <article class="treat-page-card" id="filler">
+            <div class="media"><img src="images/opt/filler-card.jpg" alt="Hands and linen texture" width="900" height="1125"></div>
+            <h2 data-i18n="tx.filler.h">Filler</h2>
+            <p class="price" data-i18n="tx.filler.price">From ฿12,900 / cc</p>
+            <p class="lede" data-i18n="tx.filler.p">Restores volume or softens contours with hyaluronic filler. Amount in cc is planned to your face, not a fixed look.</p>
+            <div class="actions">
+              <a class="btn" href="consult.html" data-i18n="hero.cta2">Free consultation</a>
+              <a class="btn ghost" href="booking.html" data-i18n="hero.cta1">Book now</a>
+            </div>
+          </article>
+          <article class="treat-page-card" id="skin">
+            <div class="media"><img src="images/opt/skin-card.jpg" alt="Warm skin texture crop" width="900" height="1125"></div>
+            <h2 data-i18n="tx.skin.h">Skin quality</h2>
+            <p class="price" data-i18n="tx.skin.price">From ฿3,900</p>
+            <p class="lede" data-i18n="tx.skin.p">Booster and pico sessions aimed at texture, tone and glow. Number of sessions depends on your baseline skin.</p>
+            <div class="actions">
+              <a class="btn" href="consult.html" data-i18n="hero.cta2">Free consultation</a>
+              <a class="btn ghost" href="booking.html" data-i18n="hero.cta1">Book now</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section style="padding-top:24px">
+    <section class="section-blush treat-detail">
       <div class="wrap">
-        <article class="treat-section reveal" id="botox">
+        <article class="treat-section reveal">
           <div class="media curtain-photo"><img src="images/opt/botox-card.jpg" alt="Soft portrait lighting" loading="lazy" width="900" height="1125"></div>
           <div>
             <h2 class="title" data-i18n="tx.botox.h">Botox</h2>
-            <p class="lede" data-i18n="tx.botox.p">Softens dynamic lines by easing selected facial muscles. Areas and units are decided with the doctor after assessment.</p>
             <div class="meta-grid">
               <div class="meta-item"><div class="k" data-i18n="tx.meta.time">Session time</div><div class="v" data-i18n="tx.botox.time">20 · 40 min</div></div>
               <div class="meta-item"><div class="k" data-i18n="tx.meta.down">Downtime</div><div class="v" data-i18n="tx.botox.down">Usually light redness for a few hours</div></div>
               <div class="meta-item"><div class="k" data-i18n="tx.meta.price">From price</div><div class="v" data-i18n="tx.botox.price">From ฿6,500 / area</div></div>
             </div>
             <div class="consult-note" data-i18n="tx.note">Every plan starts with a free doctor consultation</div>
-            <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
-              <a class="btn" href="consult.html" data-i18n="hero.cta2">Free consultation</a>
-              <a class="btn ghost" href="booking.html" data-i18n="hero.cta1">Book now</a>
-            </div>
           </div>
         </article>
-
-        <article class="treat-section reveal" id="filler">
+        <article class="treat-section reveal">
           <div class="media curtain-photo"><img src="images/opt/filler-card.jpg" alt="Hands and linen texture" loading="lazy" width="900" height="1125"></div>
           <div>
             <h2 class="title" data-i18n="tx.filler.h">Filler</h2>
-            <p class="lede" data-i18n="tx.filler.p">Restores volume or softens contours with hyaluronic filler. Amount in cc is planned to your face, not a fixed look.</p>
             <div class="meta-grid">
               <div class="meta-item"><div class="k" data-i18n="tx.meta.time">Session time</div><div class="v" data-i18n="tx.filler.time">30 · 60 min</div></div>
               <div class="meta-item"><div class="k" data-i18n="tx.meta.down">Downtime</div><div class="v" data-i18n="tx.filler.down">Possible swelling for 1 · 3 days</div></div>
               <div class="meta-item"><div class="k" data-i18n="tx.meta.price">From price</div><div class="v" data-i18n="tx.filler.price">From ฿12,900 / cc</div></div>
             </div>
             <div class="consult-note" data-i18n="tx.note">Every plan starts with a free doctor consultation</div>
-            <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
-              <a class="btn" href="consult.html" data-i18n="hero.cta2">Free consultation</a>
-              <a class="btn ghost" href="booking.html" data-i18n="hero.cta1">Book now</a>
-            </div>
           </div>
         </article>
-
-        <article class="treat-section reveal" id="skin">
+        <article class="treat-section reveal">
           <div class="media curtain-photo"><img src="images/opt/skin-card.jpg" alt="Warm skin texture crop" loading="lazy" width="900" height="1125"></div>
           <div>
             <h2 class="title" data-i18n="tx.skin.h">Skin quality</h2>
-            <p class="lede" data-i18n="tx.skin.p">Booster and pico sessions aimed at texture, tone and glow. Number of sessions depends on your baseline skin.</p>
             <div class="meta-grid">
               <div class="meta-item"><div class="k" data-i18n="tx.meta.time">Session time</div><div class="v" data-i18n="tx.skin.time">30 · 75 min</div></div>
               <div class="meta-item"><div class="k" data-i18n="tx.meta.down">Downtime</div><div class="v" data-i18n="tx.skin.down">Mild flush or dryness for 1 · 2 days</div></div>
               <div class="meta-item"><div class="k" data-i18n="tx.meta.price">From price</div><div class="v" data-i18n="tx.skin.price">From ฿3,900</div></div>
             </div>
             <div class="consult-note" data-i18n="tx.note">Every plan starts with a free doctor consultation</div>
-            <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
-              <a class="btn" href="consult.html" data-i18n="hero.cta2">Free consultation</a>
-              <a class="btn ghost" href="booking.html" data-i18n="hero.cta1">Book now</a>
-            </div>
           </div>
         </article>
       </div>
@@ -117,8 +136,8 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <div class="logo-mark" data-i18n="brand.name">PRAOW CLINIC</div>
-        <div class="logo-sub" data-i18n="brand.sub">Aesthetic Medicine · Thonglor</div>
+        <div class="logo-mark" data-i18n="brand.mark">PRAOW</div>
+        <div class="logo-sub" data-i18n="brand.clinic">Clinic</div>
         <p data-i18n="foot.tag">Aesthetic medicine in Thonglor. Planned by doctors, booked in one minute.</p>
       </div>
       <div>
@@ -133,7 +152,6 @@
         <ul>
           <li data-i18n="foot.addr">88 Sukhumvit 55, Khlong Tan Nuea, Watthana, Bangkok</li>
           <li data-i18n="foot.hours">Daily 10:00 · 20:00</li>
-          <li><a class="btn ghost" style="margin-top:10px" href="https://line.me/" target="_blank" rel="noopener" data-i18n="foot.line">Chat on LINE</a></li>
         </ul>
       </div>
     </div>

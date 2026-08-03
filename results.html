@@ -7,6 +7,9 @@
   <title>Results · PRAOW CLINIC</title>
   <meta name="description" content="Before and after skin-texture crops. Results vary by individual.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preload" as="font" href="fonts/cormorant-2.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="fonts/manrope-6.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="fonts/anuphan-7.woff2" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,8 +18,8 @@
   <header class="site-header">
     <div class="header-in">
       <a href="index.html" class="logo">
-        <span class="logo-mark" data-i18n="brand.name">PRAOW CLINIC</span>
-        <span class="logo-sub" data-i18n="brand.sub">Aesthetic Medicine · Thonglor</span>
+        <span class="logo-mark" data-i18n="brand.mark">PRAOW</span>
+        <span class="logo-sub" data-i18n="brand.clinic">Clinic</span>
       </a>
       <nav class="nav">
         <a class="nav-link" data-page="treatments" href="treatments.html" data-i18n="nav.treatments">Treatments</a>
@@ -47,27 +50,30 @@
   </div>
 
   <main>
-    <section class="page-hero">
+    <section class="page-hero page-compose results-compose">
       <div class="wrap">
         <p class="eyebrow" data-i18n="ba.eyebrow">Results</p>
         <h1 class="display" data-i18n="page.results.title">Results</h1>
         <p class="lede" data-i18n="page.results.lede">Six paired skin-texture crops. Drag each handle to compare.</p>
         <p class="note" data-i18n="ba.note">Results vary by individual</p>
-      </div>
-    </section>
 
-    <section style="padding-top:12px">
-      <div class="wrap">
-        <div class="ba-gallery">
-          <figure class="ba-item reveal">
+        <div class="ba-gallery" style="margin-top:14px">
+          <figure class="ba-item">
             <div class="ba-slider">
-              <img class="ba-after" src="images/opt/ba/skin1-after.jpg" alt="After texture 1" loading="lazy" width="800" height="1000">
+              <img class="ba-after" src="images/opt/ba/skin1-after.jpg" alt="After texture 1" width="800" height="1000">
               <div class="ba-before-wrap"><img src="images/opt/ba/skin1-before.jpg" alt="Before texture 1" width="800" height="1000"></div>
               <div class="ba-handle"></div>
               <div class="ba-labels"><span data-i18n="ba.before">Before</span><span data-i18n="ba.after">After</span></div>
             </div>
             <figcaption data-i18n="ba.cap1">Skin booster · 2 sessions</figcaption>
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-blush ba-more">
+      <div class="wrap">
+        <div class="ba-gallery">
           <figure class="ba-item reveal">
             <div class="ba-slider">
               <img class="ba-after" src="images/opt/ba/skin2-after.jpg" alt="After texture 2" loading="lazy" width="800" height="1000">
@@ -121,8 +127,8 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <div class="logo-mark" data-i18n="brand.name">PRAOW CLINIC</div>
-        <div class="logo-sub" data-i18n="brand.sub">Aesthetic Medicine · Thonglor</div>
+        <div class="logo-mark" data-i18n="brand.mark">PRAOW</div>
+        <div class="logo-sub" data-i18n="brand.clinic">Clinic</div>
         <p data-i18n="foot.tag">Aesthetic medicine in Thonglor. Planned by doctors, booked in one minute.</p>
       </div>
       <div>
