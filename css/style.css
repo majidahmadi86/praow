@@ -777,7 +777,7 @@ html[lang="th"] .stat-strip .stat strong { font-family: var(--font-thai); }
   white-space: nowrap;
   max-width: calc(100% - 24px);
 }
-.glass-chip .star { color: var(--bronze); }
+.glass-chip .star { color: var(--ink); }
 .glass-chip.c1 { left: 12px; top: 14%; animation-delay: 0s; }
 .glass-chip.c2 { right: 10px; top: 42%; animation-delay: 1.2s; }
 .glass-chip.c3 { left: 16px; bottom: 14%; animation-delay: 2.4s; }
