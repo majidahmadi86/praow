@@ -4,3 +4,11 @@ node_modules
 *.log
 .env
 .env.*
+
+.vercel
+.env*
+package.json
+package-lock.json
+node_modules/
+*.tmp.jpg
+
