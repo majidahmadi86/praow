@@ -1,0 +1,50 @@
+{
+  "base": "https://praow.mikaro.studio",
+  "build": {
+    "meta": "praow-v3-b0e5421",
+    "dataAttr": "praow-v3-b0e5421"
+  },
+  "shots": [
+    "home-390-en.png",
+    "treatments-390-en.png",
+    "results-390-en.png",
+    "consult-390-en.png",
+    "booking-390-en.png",
+    "home-1440-en.png",
+    "treatments-1440-en.png",
+    "results-1440-en.png",
+    "consult-1440-en.png",
+    "booking-1440-en.png",
+    "home-390-th.png",
+    "treatments-390-th.png",
+    "results-390-th.png",
+    "consult-390-th.png",
+    "booking-390-th.png",
+    "home-1440-th.png",
+    "treatments-1440-th.png",
+    "results-1440-th.png",
+    "consult-1440-th.png",
+    "booking-1440-th.png",
+    "ba-slider-01.png",
+    "ba-slider-02.png",
+    "ba-slider-03.png",
+    "ba-slider-04.png",
+    "ba-slider-05.png",
+    "ba-slider-06.png",
+    "consult-form-en.png",
+    "consult-form-th.png",
+    "booking-deposit.png",
+    "booking-success.png",
+    "footer-en.png",
+    "footer-th.png",
+    "favicon-lockup.png",
+    "sig-title-390.png",
+    "sig-title-1440.png"
+  ],
+  "faviconHits": [
+    {
+      "url": "https://praow.mikaro.studio/favicon.svg",
+      "status": 200
+    }
+  ]
+}
