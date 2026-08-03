@@ -36,18 +36,18 @@ async function cropSave(input, output, { width, height, left, top, w, h, quality
 
 async function main() {
   // Hero: tall portrait, face-forward
-  await cropSave(path.join(src, "hero-src.jpg"), path.join(opt, "hero.jpg"), {
-    width: 1200,
-    height: 1600,
+  await cropSave(path.join(src, "hero-src.jpg"), path.join(opt, "hero-v3.jpg"), {
+    width: 960,
+    height: 1280,
     left: 0.12,
     top: 0.05,
     w: 0.76,
     h: 0.85,
-    quality: 82,
+    quality: 72,
   });
 
   // Botox: temple/brow profile portrait (from calm hero source)
-  await cropSave(path.join(src, "hero-src.jpg"), path.join(opt, "botox-card.jpg"), {
+  await cropSave(path.join(src, "hero-src.jpg"), path.join(opt, "botox-card-v3.jpg"), {
     width: 900,
     height: 1125,
     left: 0.18,
@@ -58,7 +58,7 @@ async function main() {
   });
 
   // Filler: lips/cheek
-  await cropSave(path.join(src, "filler-src.jpg"), path.join(opt, "filler-card.jpg"), {
+  await cropSave(path.join(src, "filler-src.jpg"), path.join(opt, "filler-card-v3.jpg"), {
     width: 900,
     height: 1125,
     left: 0.2,
@@ -69,7 +69,7 @@ async function main() {
   });
 
   // Skin: glowing bare-skin cheek macro
-  await cropSave(path.join(src, "praow-ba-src-01.jpg"), path.join(opt, "skin-card.jpg"), {
+  await cropSave(path.join(src, "praow-ba-src-01.jpg"), path.join(opt, "skin-card-v3.jpg"), {
     width: 900,
     height: 1125,
     left: 0.32,
@@ -83,8 +83,8 @@ async function main() {
   await sharp(path.join(src, "interior-src.jpg"))
     .resize(1000, 1250, { fit: "cover", position: "centre" })
     .jpeg({ quality: 80, mozjpeg: true })
-    .toFile(path.join(opt, "interior.jpg"));
-  console.log("interior.jpg", fs.statSync(path.join(opt, "interior.jpg")).size);
+    .toFile(path.join(opt, "interior-v3.jpg"));
+  console.log("interior-v3.jpg", fs.statSync(path.join(opt, "interior-v3.jpg")).size);
 
   // Delete banned map
   const map = path.join(opt, "map.jpg");
