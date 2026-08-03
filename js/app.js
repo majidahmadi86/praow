@@ -2,10 +2,18 @@
 (function () {
   "use strict";
 
+  var PRAOW_BUILD = "praow-v3-pending";
+  try {
+    document.documentElement.setAttribute("data-praow-build", PRAOW_BUILD);
+    var meta = document.querySelector('meta[name="praow-build"]');
+    if (meta) { meta.setAttribute("content", PRAOW_BUILD); }
+    console.info("[praow]", PRAOW_BUILD);
+  } catch (e) {}
+
   var dict = {
     en: {
       "brand.mark": "PRAOW",
-      "brand.clinic": "Clinic",
+      "brand.clinic": "Clinic · Thonglor",
       "brand.sub": "Aesthetic Medicine · Thonglor",
       "nav.treatments": "Treatments",
       "nav.results": "Results",
@@ -14,9 +22,14 @@
       "nav.book": "Book now",
       "ribbon": "DEMO · Built by Mikaro Studio in 48h",
       "ribbon.href": "https://mikaro.studio/business",
+      "hero.l1": "Skin,",
+      "hero.l2": "treated like",
+      "hero.l3": "a <em class=\"ital\">craft</em>.",
       "hero.title": "Skin, treated like a <em class=\"ital\">craft</em>.",
       "hero.lede": "Botox, fillers and skin quality · planned by doctors, booked in one minute.",
       "hero.chip": "4.9 · 128 Google reviews",
+      "hero.slot": "Next slot today · 14:30",
+      "hero.deposit": "฿500 locks your slot",
       "hero.float": "Bookable in 1 minute",
       "hero.cta1": "Book now",
       "hero.cta2": "Free consultation",
@@ -36,12 +49,12 @@
       "ba.before": "Before",
       "ba.after": "After",
       "ba.cta": "See more results",
-      "ba.cap1": "Skin booster · 2 sessions",
-      "ba.cap2": "Pico · 3 sessions",
-      "ba.cap3": "Skin quality plan · 4 weeks",
-      "ba.cap4": "Booster · 2 sessions",
-      "ba.cap5": "Texture focus · 3 sessions",
-      "ba.cap6": "Pico + booster · 4 weeks",
+      "ba.cap1": "Botox · 1 session",
+      "ba.cap2": "Filler · 1 session",
+      "ba.cap3": "Skin quality · 2 sessions",
+      "ba.cap4": "Botox · 2 sessions",
+      "ba.cap5": "Filler · 1 session",
+      "ba.cap6": "Skin quality · 3 sessions",
       "ba.note": "Results vary by individual",
       "doc.eyebrow": "Clinical care",
       "doc.title": "Led by aesthetic physicians · 12 years of <em class=\"ital\">practice</em>",
@@ -60,7 +73,7 @@
       "foot.addr": "88 Sukhumvit 55, Khlong Tan Nuea, Watthana, Bangkok",
       "foot.hours": "Daily 10:00 · 20:00",
       "foot.line": "Chat on LINE",
-      "foot.legal": "Demo preview by Mikaro Studio · mikaro.studio",
+      "foot.legal": "Demo preview by Mikaro Studio",
       "page.treat.title": "Treatments",
       "page.treat.lede": "Plain language on what each treatment does, how long it takes, and what downtime to expect.",
       "page.results.title": "Results",
@@ -89,6 +102,9 @@
       "tx.meta.price": "From price",
       "tx.note": "Every plan starts with a free doctor consultation",
       "cf.demo": "Demo mode · nothing is sent to a clinic. Form runs in your browser.",
+      "cf.s1t": "Share",
+      "cf.s2t": "Review",
+      "cf.s3t": "Plan",
       "cf.s1": "Send your photo and concern",
       "cf.s2": "Doctor reviews",
       "cf.s3": "Your plan and price within 24h",
@@ -119,7 +135,7 @@
       "bk.deposit.title": "Deposit",
       "bk.deposit.lede": "฿500 deposit locks your slot · deducted from your treatment",
       "bk.pay.prompt": "PromptPay QR",
-      "bk.pay.prompt.s": "Scan with your banking app",
+      "bk.pay.prompt.s": "สแกนด้วยแอปธนาคาร / Scan with your banking app",
       "bk.pay.card": "Card",
       "bk.pay.card.s": "Visa · Mastercard · JCB",
       "bk.confirm": "Confirm booking",
@@ -134,7 +150,7 @@
     },
     th: {
       "brand.mark": "พราว",
-      "brand.clinic": "คลินิก",
+      "brand.clinic": "คลินิก · ทองหล่อ",
       "brand.sub": "เวชศาสตร์ความงาม · ทองหล่อ",
       "nav.treatments": "ทรีตเมนต์",
       "nav.results": "ผลลัพธ์",
@@ -143,9 +159,14 @@
       "nav.book": "จองคิวเลย",
       "ribbon": "เดโม่ · สร้างโดย Mikaro Studio ใน 48 ชม.",
       "ribbon.href": "https://mikaro.studio/th/business",
+      "hero.l1": "ผิว<em class=\"ital\">พราว</em>",
+      "hero.l2": "ดูแลอย่าง",
+      "hero.l3": "งานฝีมือ",
       "hero.title": "ผิวพราว ดูแลอย่าง<em class=\"ital\">งานฝีมือ</em>",
       "hero.lede": "โบท็อกซ์ ฟิลเลอร์ และผิวสุขภาพดี วางแผนโดยแพทย์ จองได้ในหนึ่งนาที",
       "hero.chip": "4.9 · รีวิว Google 128 รายการ",
+      "hero.slot": "คิวว่างวันนี้ · 14:30",
+      "hero.deposit": "มัดจำ 500.- ล็อกคิว",
       "hero.float": "จองได้ใน 1 นาที",
       "hero.cta1": "จองคิวเลย",
       "hero.cta2": "ปรึกษาฟรี",
@@ -165,12 +186,12 @@
       "ba.before": "ก่อน",
       "ba.after": "หลัง",
       "ba.cta": "ดูผลลัพธ์เพิ่ม",
-      "ba.cap1": "สกินบูสเตอร์ · 2 ครั้ง",
-      "ba.cap2": "ปิโก · 3 ครั้ง",
-      "ba.cap3": "แผนผิวใส · 4 สัปดาห์",
-      "ba.cap4": "บูสเตอร์ · 2 ครั้ง",
-      "ba.cap5": "โฟกัสพื้นผิว · 3 ครั้ง",
-      "ba.cap6": "ปิโก + บูสเตอร์ · 4 สัปดาห์",
+      "ba.cap1": "โบท็อกซ์ · 1 ครั้ง",
+      "ba.cap2": "ฟิลเลอร์ · 1 ครั้ง",
+      "ba.cap3": "ผิวใส · 2 ครั้ง",
+      "ba.cap4": "โบท็อกซ์ · 2 ครั้ง",
+      "ba.cap5": "ฟิลเลอร์ · 1 ครั้ง",
+      "ba.cap6": "ผิวใส · 3 ครั้ง",
       "ba.note": "ผลลัพธ์ขึ้นอยู่กับแต่ละบุคคล",
       "doc.eyebrow": "การดูแลโดยแพทย์",
       "doc.title": "ดูแลโดยแพทย์เวชศาสตร์ความงาม ประสบการณ์ 12 <em class=\"ital\">ปี</em>",
@@ -189,7 +210,7 @@
       "foot.addr": "88 สุขุมวิท 55 คลองตันเหนือ วัฒนา กรุงเทพฯ",
       "foot.hours": "เปิดทุกวัน 10:00 · 20:00",
       "foot.line": "แชททาง LINE",
-      "foot.legal": "เว็บตัวอย่างโดย Mikaro Studio · mikaro.studio",
+      "foot.legal": "เว็บตัวอย่างโดย Mikaro Studio",
       "page.treat.title": "ทรีตเมนต์",
       "page.treat.lede": "อธิบายแบบเข้าใจง่าย ว่าแต่ละทรีตเมนต์ทำอะไร ใช้เวลานานเท่าไร และมี downtime อย่างไร",
       "page.results.title": "ผลลัพธ์",
@@ -218,6 +239,9 @@
       "tx.meta.price": "ราคาเริ่มต้น",
       "tx.note": "ทุกแผนการรักษาเริ่มจากปรึกษาแพทย์ฟรี",
       "cf.demo": "โหมดเดโม่ · ไม่ส่งข้อมูลไปคลินิกจริง ฟอร์มทำงานในเบราว์เซอร์",
+      "cf.s1t": "ส่งข้อมูล",
+      "cf.s2t": "ประเมิน",
+      "cf.s3t": "รับแผน",
       "cf.s1": "ส่งรูปและความกังวลของคุณ",
       "cf.s2": "แพทย์ประเมิน",
       "cf.s3": "รับแผนและราคาใน 24 ชม.",
@@ -248,7 +272,7 @@
       "bk.deposit.title": "มัดจำ",
       "bk.deposit.lede": "มัดจำ 500.- เพื่อล็อกคิว หักจากค่าบริการวันจริง",
       "bk.pay.prompt": "PromptPay QR",
-      "bk.pay.prompt.s": "สแกนด้วยแอปธนาคาร",
+      "bk.pay.prompt.s": "สแกนด้วยแอปธนาคาร / Scan with your banking app",
       "bk.pay.card": "บัตร",
       "bk.pay.card.s": "Visa · Mastercard · JCB",
       "bk.confirm": "ยืนยันการจอง",
@@ -530,8 +554,10 @@
         pays[p].classList.toggle("on", pays[p].getAttribute("data-pay") === state.pay);
       }
       var qr = root.querySelector(".qr-box");
+      var pp = root.querySelector("#pp-card") || root.querySelector(".pp-card");
       var cards = root.querySelector(".card-row");
-      if (qr) { qr.style.display = state.pay === "prompt" ? "block" : "none"; }
+      if (qr) { qr.style.display = "none"; }
+      if (pp) { pp.style.display = state.pay === "prompt" ? "block" : "none"; }
       if (cards) { cards.style.display = state.pay === "card" ? "flex" : "none"; }
 
       var okSum = root.querySelector("#bk-ok-summary");
@@ -600,7 +626,7 @@
       document.body.appendChild(a);
     }
     a.href = t("ribbon.href");
-    a.textContent = t("ribbon");
+    a.innerHTML = '<svg class="logo-arch" viewBox="0 0 32 36" width="14" height="16" aria-hidden="true"><path d="M4 34V16a12 12 0 0 1 24 0v18" fill="none" stroke="#A67C46" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="5.5" r="2.8" fill="#A67C46"/></svg><span>' + t("ribbon") + "</span>";
   }
 
   document.addEventListener("DOMContentLoaded", function () {

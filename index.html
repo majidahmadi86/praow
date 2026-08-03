@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="praow-build" content="praow-v3-pending">
   <title>PRAOW CLINIC · Aesthetic Medicine · Thonglor</title>
   <meta name="description" content="Botox, fillers and skin quality in Thonglor. Planned by doctors, booked in one minute.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
   <link rel="preload" as="image" href="images/opt/hero.jpg" fetchpriority="high">
   <link rel="preload" as="font" href="fonts/cormorant-2.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="font" href="fonts/manrope-6.woff2" type="font/woff2" crossorigin>
@@ -18,8 +22,14 @@
   <header class="site-header">
     <div class="header-in">
       <a href="index.html" class="logo">
-        <span class="logo-mark" data-i18n="brand.mark">PRAOW</span>
-        <span class="logo-sub" data-i18n="brand.clinic">Clinic</span>
+        <svg class="logo-arch" viewBox="0 0 32 36" width="28" height="32" aria-hidden="true" focusable="false">
+          <path d="M4 34V16a12 12 0 0 1 24 0v18" fill="none" stroke="#A67C46" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="16" cy="5.5" r="2.35" fill="#A67C46"/>
+        </svg>
+        <span class="logo-text">
+          <span class="logo-mark" data-i18n="brand.mark">PRAOW</span>
+          <span class="logo-sub" data-i18n="brand.clinic">Clinic · Thonglor</span>
+        </span>
       </a>
       <nav class="nav">
         <a class="nav-link" data-page="treatments" href="treatments.html" data-i18n="nav.treatments">Treatments</a>
@@ -50,22 +60,28 @@
   </div>
 
   <main>
-    <section class="hero">
-      <div class="hero-curtain" aria-hidden="true"></div>
+    <section class="hero is-ready">
       <div class="hero-copy">
-        <p class="eyebrow" data-i18n="brand.sub">Aesthetic Medicine · Thonglor</p>
-        <h1 class="display" data-i18n="hero.title">Skin, treated like a <em class="ital">craft</em>.</h1>
+        <h1 class="hero-display">
+          <span data-i18n="hero.l1">Skin,</span>
+          <span data-i18n="hero.l2">treated like</span>
+          <span data-i18n="hero.l3">a <em class="ital">craft</em>.</span>
+        </h1>
         <p class="lede" data-i18n="hero.lede">Botox, fillers and skin quality · planned by doctors, booked in one minute.</p>
-        <div class="hero-chip"><span class="star">★</span> <span data-i18n="hero.chip">4.9 · 128 Google reviews</span></div>
         <div class="hero-cta">
           <a class="btn" href="booking.html" data-i18n="hero.cta1">Book now</a>
           <a class="btn ghost" href="consult.html" data-i18n="hero.cta2">Free consultation</a>
         </div>
-        <div class="hero-float" data-i18n="hero.float">Bookable in 1 minute</div>
       </div>
       <div class="hero-visual">
+        <div class="hero-arch-outline" aria-hidden="true"><span class="sun-dot"></span></div>
         <div class="hero-arch">
-          <img src="images/opt/hero.jpg" alt="Calm aesthetic treatment atmosphere" fetchpriority="high" width="1800" height="1200">
+          <img src="images/opt/hero.jpg" alt="Warm-light beauty portrait with calm expression" fetchpriority="high" width="1200" height="1600">
+          <div class="hero-chips">
+            <div class="glass-chip c1"><span class="star">★</span> <span data-i18n="hero.chip">4.9 · 128 Google reviews</span></div>
+            <div class="glass-chip c2" data-i18n="hero.slot">Next slot today · 14:30</div>
+            <div class="glass-chip c3" data-i18n="hero.deposit">฿500 locks your slot</div>
+          </div>
         </div>
       </div>
     </section>
@@ -79,19 +95,19 @@
         </div>
         <div class="treat-grid">
           <a class="treat-card reveal" href="treatments.html#botox">
-            <div class="media curtain-photo"><img src="images/opt/botox-card.jpg" alt="Soft-light portrait crop" loading="lazy" width="900" height="1125"></div>
+            <div class="media curtain-photo"><img src="images/opt/botox-card.jpg" alt="Temple and brow portrait crop" loading="lazy" width="900" height="1125"></div>
             <h3 data-i18n="t1.name">Botox</h3>
             <p class="price" data-i18n="t1.price">From ฿6,500 per area</p>
             <span class="more" data-i18n="more">View details</span>
           </a>
           <a class="treat-card reveal" href="treatments.html#filler">
-            <div class="media curtain-photo"><img src="images/opt/filler-card.jpg" alt="Elegant hands and linen" loading="lazy" width="900" height="1125"></div>
+            <div class="media curtain-photo"><img src="images/opt/filler-card.jpg" alt="Lips and cheek portrait crop" loading="lazy" width="900" height="1125"></div>
             <h3 data-i18n="t2.name">Filler</h3>
             <p class="price" data-i18n="t2.price">From ฿12,900 per cc</p>
             <span class="more" data-i18n="more">View details</span>
           </a>
           <a class="treat-card reveal" href="treatments.html#skin">
-            <div class="media curtain-photo"><img src="images/opt/skin-card.jpg" alt="Skin texture in warm light" loading="lazy" width="900" height="1125"></div>
+            <div class="media curtain-photo"><img src="images/opt/skin-card.jpg" alt="Glowing bare-skin macro" loading="lazy" width="900" height="1125"></div>
             <h3 data-i18n="t3.name">Skin quality</h3>
             <p class="price" data-i18n="t3.price">Booster + pico from ฿3,900</p>
             <span class="more" data-i18n="more">View details</span>
@@ -110,9 +126,9 @@
         </div>
         <div class="reveal">
           <div class="ba-slider" aria-label="Before and after slider">
-            <img class="ba-after" src="images/opt/ba/skin1-after.jpg" alt="After skin texture" loading="lazy" width="800" height="1000">
+            <img class="ba-after" src="images/opt/ba/praow-ba-01-after.jpg" alt="After skin texture" loading="lazy" width="800" height="1000">
             <div class="ba-before-wrap">
-              <img src="images/opt/ba/skin1-before.jpg" alt="Before skin texture" loading="lazy" width="800" height="1000">
+              <img src="images/opt/ba/praow-ba-01-before.jpg" alt="Before skin texture" loading="lazy" width="800" height="1000">
             </div>
             <div class="ba-handle" aria-hidden="true"></div>
             <div class="ba-labels">
@@ -120,7 +136,7 @@
               <span data-i18n="ba.after">After</span>
             </div>
           </div>
-          <p class="note" style="margin-top:10px" data-i18n="ba.cap1">Skin booster · 2 sessions</p>
+          <p class="note" style="margin-top:10px" data-i18n="ba.cap1">Botox · 1 session</p>
         </div>
       </div>
     </section>
@@ -128,7 +144,7 @@
     <section class="section-ivory">
       <div class="wrap doctor-block">
         <div class="media curtain-photo reveal">
-          <img src="images/opt/interior.jpg" alt="Calm clinical interior with wood and linen" loading="lazy" width="1000" height="1250">
+          <img src="images/opt/interior.jpg" alt="Calm wood and linen consult room" loading="lazy" width="1000" height="1250">
         </div>
         <div class="reveal">
           <p class="eyebrow" data-i18n="doc.eyebrow">Clinical care</p>
@@ -166,8 +182,16 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <div class="logo-mark" data-i18n="brand.mark">PRAOW</div>
-        <div class="logo-sub" data-i18n="brand.clinic">Clinic</div>
+        <div class="logo">
+          <svg class="logo-arch" viewBox="0 0 32 36" width="28" height="32" aria-hidden="true" focusable="false">
+            <path d="M4 34V16a12 12 0 0 1 24 0v18" fill="none" stroke="#A67C46" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="16" cy="5.5" r="2.35" fill="#A67C46"/>
+          </svg>
+          <span class="logo-text">
+            <span class="logo-mark" data-i18n="brand.mark">PRAOW</span>
+            <span class="logo-sub" data-i18n="brand.clinic">Clinic · Thonglor</span>
+          </span>
+        </div>
         <p data-i18n="foot.tag">Aesthetic medicine in Thonglor. Planned by doctors, booked in one minute.</p>
       </div>
       <div>
@@ -184,12 +208,9 @@
           <li data-i18n="foot.hours">Daily 10:00 · 20:00</li>
           <li><a class="btn ghost" style="margin-top:10px" href="https://line.me/" target="_blank" rel="noopener" data-i18n="foot.line">Chat on LINE</a></li>
         </ul>
-        <div class="map-ph">
-          <img src="images/opt/map.jpg" alt="Map placeholder for Thonglor area" loading="lazy" width="1200" height="675">
-        </div>
       </div>
     </div>
-    <div class="wrap footer-legal" data-i18n="foot.legal">Demo preview by Mikaro Studio · mikaro.studio</div>
+    <div class="wrap footer-legal"><span data-i18n="foot.legal">Demo preview by Mikaro Studio</span> · <a href="https://mikaro.studio" target="_blank" rel="noopener">mikaro.studio</a></div>
   </footer>
 
   <script src="js/app.js"></script>
