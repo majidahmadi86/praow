@@ -1,5 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <rect width="64" height="64" rx="14" fill="#FAF6F0"/>
-  <path d="M12 52V30a20 20 0 0 1 40 0v22" stroke="#241F1B" stroke-width="2.4" stroke-linecap="round"/>
-  <circle cx="32" cy="12" r="3.2" fill="#A67C46"/>
+  <line x1="14" y1="48" x2="50" y2="48" stroke="#C08A6B" stroke-width="1.6" stroke-linecap="round"/><line x1="32" y1="48" x2="19.60" y2="48.00" stroke="#C08A6B" stroke-width="1.8" stroke-linecap="round"/><line x1="32" y1="48" x2="18.40" y2="42.36" stroke="#C08A6B" stroke-width="1.8" stroke-linecap="round"/><line x1="32" y1="48" x2="19.94" y2="35.94" stroke="#C08A6B" stroke-width="1.8" stroke-linecap="round"/><line x1="32" y1="48" x2="24.59" y2="30.10" stroke="#C08A6B" stroke-width="1.8" stroke-linecap="round"/><line x1="32" y1="48" x2="32.00" y2="26.30" stroke="#C08A6B" stroke-width="1.8" stroke-linecap="round"/><line x1="32" y1="48" x2="39.41" y2="30.10" stroke="#C08A6B" stroke-width="1.8" stroke-linecap="round"/><line x1="32" y1="48" x2="44.06" y2="35.94" stroke="#C08A6B" stroke-width="1.8" stroke-linecap="round"/><line x1="32" y1="48" x2="45.60" y2="42.36" stroke="#C08A6B" stroke-width="1.8" stroke-linecap="round"/><line x1="32" y1="48" x2="44.40" y2="48.00" stroke="#C08A6B" stroke-width="1.8" stroke-linecap="round"/>
 </svg>
