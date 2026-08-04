@@ -1,0 +1,21 @@
+dashboard-redirect: PASS -> http://127.0.0.1:55140/owner/
+login-enter: PASS url=http://127.0.0.1:55140/owner/dashboard
+refresh-session: PASS
+wed-afternoon-blocked: PASS free=[]
+free-slot-pick: 2026-08-03 10
+new-booking: PASS PRW-8094 10:00
+csv-new-booking: PASS
+csv-new-lines:
+  0|Booking code,Date,Time,Customer,Service,Deposit,Status,Phone
+  1|PRW-8094,2026-08-03,10:00,"คุณพลอยทดสอบ",Filler,paid 500,confirmed,089-xxx-xx42
+edit-time: PASS 11:00
+cancel: PASS
+search-ploy: rows=3 PASS
+filtered-csv-count: 2
+filtered-csv-first:
+  1|Booking code,Date,Time,Customer,Service,Deposit,Status,Phone
+  2|PRW-2631001323,2026-08-03,13:00,"คุณพลอย",Botox,paid 500,done,084-xxx-xx78
+  3|PRW-2631061340,2026-08-09,13:00,"คุณพลอย",Skin booster,paid 500,confirmed,084-xxx-xx19
+week-next: label=10 - 16 Aug 2026 bookings=16
+week-today-jump: PASS
+reset-demo: PASS store=null
