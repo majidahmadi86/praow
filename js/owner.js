@@ -242,16 +242,18 @@
     var a = days[0];
     var b = days[6];
     if (lang === "th") {
-      try {
-        var opts = { day: "numeric", month: "short", year: "numeric" };
-        return a.getDate() + " · " + b.toLocaleDateString("th-TH", opts);
-      } catch (e) {}
+      var thMonths = ["ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค."];
+      var y = a.getFullYear();
+      if (a.getMonth() === b.getMonth()) {
+        return a.getDate() + " - " + b.getDate() + " " + thMonths[a.getMonth()] + " " + y;
+      }
+      return a.getDate() + " " + thMonths[a.getMonth()] + " - " + b.getDate() + " " + thMonths[b.getMonth()] + " " + y;
     }
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     if (a.getMonth() === b.getMonth()) {
-      return a.getDate() + " · " + b.getDate() + " " + months[a.getMonth()] + " " + a.getFullYear();
+      return a.getDate() + " - " + b.getDate() + " " + months[a.getMonth()] + " " + a.getFullYear();
     }
-    return a.getDate() + " " + months[a.getMonth()] + " · " + b.getDate() + " " + months[b.getMonth()] + " " + b.getFullYear();
+    return a.getDate() + " " + months[a.getMonth()] + " - " + b.getDate() + " " + months[b.getMonth()] + " " + b.getFullYear();
   }
 
   function svcLabel(key) {

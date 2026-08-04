@@ -99,12 +99,13 @@
     return SERVICES[0];
   }
 
+  /* Past weeks ~history density, current ~44, future weeks intentionally sparser. */
   function densityForWeek(mon, today) {
     var monY = ymd(mon);
     var todayMon = ymd(weekMonday(today));
     if (monY === todayMon) { return 44; }
-    if (monY < todayMon) { return 36; }
-    return 18; /* future weeks sparser */
+    if (monY < todayMon) { return 38; }
+    return 16;
   }
 
   function generateWeekBookings(refDate, realToday) {
