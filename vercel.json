@@ -1,6 +1,28 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/dashboard",
+      "destination": "/owner/",
+      "permanent": false
+    },
+    {
+      "source": "/dashboard.html",
+      "destination": "/owner/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/owner/dashboard",
+      "destination": "/owner/dashboard.html"
+    },
+    {
+      "source": "/owner",
+      "destination": "/owner/index.html"
+    }
+  ],
   "headers": [
     {
       "source": "/fonts/(.*)",

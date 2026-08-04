@@ -6,6 +6,8 @@
   var Data = window.PraowOwnerData;
   if (!Data) { return; }
 
+  /* Dual-store so refresh keeps the demo session even if one storage is blocked. */
+
   var dict = {
     en: {
       "own.title": "PRAOW · Owner",
@@ -140,11 +142,18 @@
   }
 
   function isAuthed() {
-    try { return sessionStorage.getItem(AUTH_KEY) === "1"; } catch (e) { return false; }
+    try {
+      if (sessionStorage.getItem(AUTH_KEY) === "1") { return true; }
+    } catch (e) {}
+    try {
+      if (localStorage.getItem(AUTH_KEY) === "1") { return true; }
+    } catch (e2) {}
+    return false;
   }
 
   function setAuthed() {
     try { sessionStorage.setItem(AUTH_KEY, "1"); } catch (e) {}
+    try { localStorage.setItem(AUTH_KEY, "1"); } catch (e2) {}
   }
 
   function formatDateLabel(d) {
@@ -182,17 +191,32 @@
     requestAnimationFrame(frame);
   }
 
+  function goDashboard() {
+    setAuthed();
+    window.location.href = "/owner/dashboard";
+  }
+
   /* ---------- login ---------- */
   function initLogin() {
+    if (isAuthed()) {
+      window.location.replace("/owner/dashboard");
+      return;
+    }
     applyLang();
     bindLangToggles();
     var form = document.getElementById("owner-login-form");
     if (!form) { return; }
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      setAuthed();
-      window.location.href = "dashboard.html";
+      goDashboard();
     });
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        goDashboard();
+      });
+    }
   }
 
   /* ---------- dashboard ---------- */
@@ -200,7 +224,7 @@
 
   function initDashboard() {
     if (!isAuthed()) {
-      window.location.replace("index.html");
+      window.location.replace("/owner/");
       return;
     }
 

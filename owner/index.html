@@ -31,14 +31,14 @@
       <h1 class="login-title" data-i18n="own.title">PRAOW · Owner</h1>
       <p class="login-sub" data-i18n="own.login.sub">Clinic schedule · Thonglor</p>
 
-      <form id="owner-login-form" autocomplete="on">
+      <form id="owner-login-form" autocomplete="on" action="/owner/dashboard" method="get">
         <div class="field">
           <label for="owner-email" data-i18n="own.email">Email</label>
-          <input id="owner-email" name="email" type="email" value="owner@praow.demo" required>
+          <input id="owner-email" name="email" type="email" value="owner@praow.demo" required enterkeyhint="next">
         </div>
         <div class="field">
           <label for="owner-pass" data-i18n="own.pass">Password</label>
-          <input id="owner-pass" name="password" type="password" value="praowdemo" required>
+          <input id="owner-pass" name="password" type="password" value="praowdemo" required enterkeyhint="go">
         </div>
         <button type="submit" class="btn" data-i18n="own.signin">เข้าสู่ระบบ / Sign in</button>
       </form>
