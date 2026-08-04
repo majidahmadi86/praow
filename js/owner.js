@@ -81,6 +81,8 @@
       "own.filter.from": "From",
       "own.filter.to": "To",
       "own.jump.today": "วันนี้ / Today",
+      "own.jump.pick": "Go to date",
+      "own.time.pick": "Tap a free slot",
       "own.legend.blocked": "เวลาที่ปิด / Blocked",
       "own.avail.title": "Manage availability",
       "own.avail.hint": "Tap hours to block or open. Use Day off for a full day.",
@@ -161,6 +163,8 @@
       "own.filter.from": "จาก",
       "own.filter.to": "ถึง",
       "own.jump.today": "วันนี้ / Today",
+      "own.jump.pick": "ไปวันที่",
+      "own.time.pick": "แตะช่วงเวลาว่าง",
       "own.legend.blocked": "เวลาที่ปิด / Blocked",
       "own.avail.title": "จัดการเวลาว่าง",
       "own.avail.hint": "แตะชั่วโมงเพื่อปิดหรือเปิด ใช้วันหยุดสำหรับทั้งวัน",
@@ -799,23 +803,55 @@
 
   /* ---------- booking modal ---------- */
   function fillTimeOptions(date, excludeId, selectedHour) {
-    var sel = document.getElementById("bk-time");
-    if (!sel) { return; }
+    var input = document.getElementById("bk-time");
+    var root = document.getElementById("bk-time-slots");
+    var hint = document.getElementById("bk-time-hint");
+    if (!input || !root) { return; }
+
     var free = Data.freeSlots(date, excludeId);
     if (selectedHour != null && free.indexOf(+selectedHour) === -1) {
       free = free.concat([+selectedHour]).sort(function (a, b) { return a - b; });
     }
+
     if (!free.length) {
-      sel.innerHTML = '<option value="">' + t("own.time.none") + "</option>";
+      input.value = "";
+      root.innerHTML = '<p class="time-empty">' + t("own.time.none") + "</p>";
+      if (hint) { hint.hidden = true; }
       return;
     }
+
+    if (hint) {
+      hint.hidden = false;
+      hint.textContent = t("own.time.pick");
+    }
+
+    var pick = selectedHour != null && free.indexOf(+selectedHour) !== -1
+      ? +selectedHour
+      : free[0];
+    input.value = String(pick);
+
     var html = "";
     for (var i = 0; i < free.length; i++) {
-      html += '<option value="' + free[i] + '"' +
-        (+free[i] === +selectedHour ? " selected" : "") + ">" +
-        Data.pad2(free[i]) + ":00</option>";
+      var h = free[i];
+      html += '<button type="button" class="time-slot' + (h === pick ? " on" : "") +
+        '" role="option" aria-selected="' + (h === pick ? "true" : "false") +
+        '" data-hour="' + h + '">' + Data.pad2(h) + ":00</button>";
     }
-    sel.innerHTML = html;
+    root.innerHTML = html;
+
+    var slots = root.querySelectorAll(".time-slot");
+    for (var s = 0; s < slots.length; s++) {
+      slots[s].addEventListener("click", function () {
+        var hour = this.getAttribute("data-hour");
+        input.value = hour;
+        var all = root.querySelectorAll(".time-slot");
+        for (var j = 0; j < all.length; j++) {
+          var on = all[j].getAttribute("data-hour") === hour;
+          all[j].classList.toggle("on", on);
+          all[j].setAttribute("aria-selected", on ? "true" : "false");
+        }
+      });
+    }
   }
 
   function openBookingModal(id) {

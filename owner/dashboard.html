@@ -31,8 +31,6 @@
         <span class="owner-brand-text" data-i18n="own.brand">PRAOW · Owner</span>
       </div>
       <span class="owner-date" id="owner-date"></span>
-      <button type="button" class="btn-bar cacao" id="btn-new-booking" data-i18n="own.new">+ New booking / เพิ่มการจอง</button>
-      <button type="button" class="btn-bar ghost" id="btn-availability" data-i18n="own.avail">จัดการเวลาว่าง / Manage availability</button>
       <div class="lang-toggle" role="group" aria-label="Language">
         <button type="button" data-lang="en" class="on">EN</button>
         <button type="button" data-lang="th">ไทย</button>
@@ -72,10 +70,12 @@
       </article>
     </section>
 
-    <section class="panel">
+    <section class="panel" id="bookings-panel">
       <div class="panel-head">
-        <h2 data-i18n="own.list">Bookings</h2>
-        <span class="meta" id="today-meta"></span>
+        <div class="panel-head-text">
+          <h2 data-i18n="own.list">Bookings</h2>
+          <span class="meta" id="today-meta"></span>
+        </div>
       </div>
 
       <div class="filter-bar" id="filter-bar">
@@ -98,19 +98,27 @@
         </label>
       </div>
 
+      <div class="list-actions">
+        <button type="button" class="panel-cta primary" id="btn-new-booking" data-i18n="own.new">+ New booking / เพิ่มการจอง</button>
+      </div>
       <div class="today-list" id="today-list"></div>
     </section>
 
-    <section class="panel">
+    <section class="panel" id="calendar-panel">
       <div class="panel-head cal-head-row">
-        <h2 data-i18n="own.week">Week calendar</h2>
-        <div class="week-nav">
-          <button type="button" class="week-nav-btn" id="week-prev" aria-label="Previous week">‹</button>
-          <span class="week-label" id="week-label"></span>
-          <button type="button" class="week-nav-btn" id="week-next" aria-label="Next week">›</button>
-          <button type="button" class="btn-bar ghost" id="week-today" data-i18n="own.jump.today">วันนี้ / Today</button>
-          <input type="date" id="week-jump" class="week-jump" aria-label="Jump to week">
+        <div class="panel-head-text">
+          <h2 data-i18n="own.week">Week calendar</h2>
         </div>
+      </div>
+      <div class="week-nav" aria-label="Week navigation">
+        <button type="button" class="week-nav-btn" id="week-prev" aria-label="Previous week">‹</button>
+        <span class="week-label" id="week-label"></span>
+        <button type="button" class="week-nav-btn" id="week-next" aria-label="Next week">›</button>
+        <button type="button" class="panel-cta compact" id="week-today" data-i18n="own.jump.today">วันนี้ / Today</button>
+        <label class="week-jump-wrap">
+          <span data-i18n="own.jump.pick">Go to date</span>
+          <input type="date" id="week-jump" class="week-jump" aria-label="Jump to week">
+        </label>
       </div>
       <div class="cal-legend" id="cal-legend">
         <span class="leg"><i class="dot botox"></i> <span data-i18n="own.svc.botox">Botox</span></span>
@@ -118,6 +126,9 @@
         <span class="leg"><i class="dot booster"></i> <span data-i18n="own.svc.booster">Skin booster</span></span>
         <span class="leg"><i class="dot pico"></i> <span data-i18n="own.svc.pico">Pico</span></span>
         <span class="leg"><i class="dot blocked"></i> <span data-i18n="own.legend.blocked">เวลาที่ปิด / Blocked</span></span>
+      </div>
+      <div class="cal-actions">
+        <button type="button" class="panel-cta secondary" id="btn-availability" data-i18n="own.avail">จัดการเวลาว่าง / Manage availability</button>
       </div>
       <div class="day-switcher" id="day-switcher"></div>
       <div class="cal-wrap">
@@ -139,15 +150,15 @@
           <label for="bk-service" data-i18n="own.field.service">Service</label>
           <select id="bk-service" required></select>
         </div>
-        <div class="field-row">
-          <div class="field">
-            <label for="bk-date" data-i18n="own.field.date">Date</label>
-            <input type="date" id="bk-date" required>
-          </div>
-          <div class="field">
-            <label for="bk-time" data-i18n="own.field.time">Time</label>
-            <select id="bk-time" required></select>
-          </div>
+        <div class="field">
+          <label for="bk-date" data-i18n="own.field.date">Date</label>
+          <input type="date" id="bk-date" required>
+        </div>
+        <div class="field">
+          <span class="field-label" id="bk-time-label" data-i18n="own.field.time">Time</span>
+          <p class="time-hint" id="bk-time-hint" data-i18n="own.time.pick">Tap a free slot</p>
+          <input type="hidden" id="bk-time" value="">
+          <div class="time-slots" id="bk-time-slots" role="listbox" aria-labelledby="bk-time-label"></div>
         </div>
         <div class="field">
           <label for="bk-name" data-i18n="own.field.name">Customer name</label>

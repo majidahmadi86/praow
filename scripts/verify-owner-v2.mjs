@@ -138,7 +138,7 @@ try {
   await page.selectOption("#bk-service", "filler");
   await page.fill("#bk-date", freeHour.date);
   await page.waitForTimeout(150);
-  await page.selectOption("#bk-time", String(freeHour.hour));
+  await page.click(`.time-slot[data-hour="${freeHour.hour}"]`);
   await page.fill("#bk-name", "คุณพลอยทดสอบ");
   await page.fill("#bk-phone", "089-xxx-xx42");
   await page.check("#bk-dep-paid");
@@ -172,7 +172,7 @@ try {
       const free = window.PraowOwnerData.freeSlots(b.date, id);
       return free.find((h) => h !== b.hour) || free[0];
     }, created.id);
-    await page.selectOption("#bk-time", String(newHour));
+    await page.click(`.time-slot[data-hour="${newHour}"]`);
     await page.click("#booking-form button[type=submit]");
     await page.waitForTimeout(400);
     const edited = await page.evaluate((id) => window.PraowOwnerData.findById(id), created.id);
