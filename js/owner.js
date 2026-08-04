@@ -351,6 +351,7 @@
 
     document.addEventListener("praow:owner-lang", function () {
       if (dateEl) { dateEl.textContent = formatDateLabel(new Date()); }
+      fillStatusFilter();
       refreshAll(true);
     });
   }
@@ -424,12 +425,28 @@
     if (picker) { picker.value = Data.ymd(days[0]); }
   }
 
+  function fillStatusFilter() {
+    var status = document.getElementById("filter-status");
+    if (!status) { return; }
+    var cur = filters.status || "all";
+    var opts = ["all", "confirmed", "arrived", "done", "no-show", "cancelled"];
+    var html = "";
+    for (var i = 0; i < opts.length; i++) {
+      var key = opts[i] === "all" ? "own.st.all" : "own.st." + opts[i];
+      html += '<option value="' + opts[i] + '"' +
+        (opts[i] === cur ? " selected" : "") + ">" + t(key) + "</option>";
+    }
+    status.innerHTML = html;
+  }
+
   function bindToolbar() {
     var search = document.getElementById("filter-q");
     var status = document.getElementById("filter-status");
     var from = document.getElementById("filter-from");
     var to = document.getElementById("filter-to");
     var chips = document.getElementById("service-chips");
+
+    fillStatusFilter();
 
     if (search) {
       search.addEventListener("input", function () {
@@ -758,9 +775,12 @@
         var list = filteredList(false);
         var from = filters.from || "all";
         var to = filters.to || "all";
-        var name = "praow-bookings-" + from + "-to-" + to + ".csv";
+        var svc = filters.service && filters.service !== "all" ? "-" + filters.service : "";
+        var name = "praow-bookings-" + from + "-to-" + to + svc + ".csv";
         Data.downloadCsv(list, name);
         menu.hidden = true;
+        window.__praowLastCsv = Data.toCsv(list);
+        window.__praowLastCsvName = name;
       });
     }
 
