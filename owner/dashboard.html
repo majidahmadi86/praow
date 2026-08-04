@@ -31,6 +31,8 @@
         <span class="owner-brand-text" data-i18n="own.brand">PRAOW · Owner</span>
       </div>
       <span class="owner-date" id="owner-date"></span>
+      <button type="button" class="btn-bar cacao" id="btn-new-booking" data-i18n="own.new">+ New booking / เพิ่มการจอง</button>
+      <button type="button" class="btn-bar ghost" id="btn-availability" data-i18n="own.avail">จัดการเวลาว่าง / Manage availability</button>
       <div class="lang-toggle" role="group" aria-label="Language">
         <button type="button" data-lang="en" class="on">EN</button>
         <button type="button" data-lang="th">ไทย</button>
@@ -45,7 +47,7 @@
       <div class="export-wrap">
         <button type="button" class="export-btn" id="export-btn" data-i18n="own.export">Export ▾</button>
         <div class="export-menu" id="export-menu" hidden>
-          <button type="button" id="export-csv" data-i18n="own.export.csv">Bookings this week (CSV)</button>
+          <button type="button" id="export-csv" data-i18n="own.export.csv">Bookings (CSV)</button>
         </div>
       </div>
     </div>
@@ -72,16 +74,57 @@
 
     <section class="panel">
       <div class="panel-head">
-        <h2 data-i18n="own.today">Today</h2>
+        <h2 data-i18n="own.list">Bookings</h2>
         <span class="meta" id="today-meta"></span>
       </div>
+
+      <div class="filter-bar" id="filter-bar">
+        <input type="search" id="filter-q" class="filter-search" data-i18n-placeholder="own.search" placeholder="Search name or code">
+        <div class="service-chips" id="service-chips">
+          <button type="button" class="svc-filter on" data-service="all" data-i18n="own.svc.all">All</button>
+          <button type="button" class="svc-filter" data-service="botox" data-i18n="own.svc.botox">Botox</button>
+          <button type="button" class="svc-filter" data-service="filler" data-i18n="own.svc.filler">Filler</button>
+          <button type="button" class="svc-filter" data-service="booster" data-i18n="own.svc.booster">Skin booster</button>
+          <button type="button" class="svc-filter" data-service="pico" data-i18n="own.svc.pico">Pico</button>
+        </div>
+        <select id="filter-status" class="filter-status" aria-label="Status">
+          <option value="all" data-i18n="own.st.all">All statuses</option>
+          <option value="confirmed" data-i18n="own.st.confirmed">Confirmed</option>
+          <option value="arrived" data-i18n="own.st.arrived">Arrived</option>
+          <option value="done" data-i18n="own.st.done">Done</option>
+          <option value="no-show" data-i18n="own.st.no-show">No-show</option>
+          <option value="cancelled" data-i18n="own.st.cancelled">Cancelled</option>
+        </select>
+        <label class="filter-date">
+          <span data-i18n="own.filter.from">From</span>
+          <input type="date" id="filter-from">
+        </label>
+        <label class="filter-date">
+          <span data-i18n="own.filter.to">To</span>
+          <input type="date" id="filter-to">
+        </label>
+      </div>
+
       <div class="today-list" id="today-list"></div>
     </section>
 
     <section class="panel">
-      <div class="panel-head">
+      <div class="panel-head cal-head-row">
         <h2 data-i18n="own.week">Week calendar</h2>
-        <span class="meta" data-i18n="own.week.meta">Mon · Sun · 10:00 · 20:00</span>
+        <div class="week-nav">
+          <button type="button" class="week-nav-btn" id="week-prev" aria-label="Previous week">‹</button>
+          <span class="week-label" id="week-label"></span>
+          <button type="button" class="week-nav-btn" id="week-next" aria-label="Next week">›</button>
+          <button type="button" class="btn-bar ghost" id="week-today" data-i18n="own.jump.today">วันนี้ / Today</button>
+          <input type="date" id="week-jump" class="week-jump" aria-label="Jump to week">
+        </div>
+      </div>
+      <div class="cal-legend" id="cal-legend">
+        <span class="leg"><i class="dot botox"></i> <span data-i18n="own.svc.botox">Botox</span></span>
+        <span class="leg"><i class="dot filler"></i> <span data-i18n="own.svc.filler">Filler</span></span>
+        <span class="leg"><i class="dot booster"></i> <span data-i18n="own.svc.booster">Skin booster</span></span>
+        <span class="leg"><i class="dot pico"></i> <span data-i18n="own.svc.pico">Pico</span></span>
+        <span class="leg"><i class="dot blocked"></i> <span data-i18n="own.legend.blocked">เวลาที่ปิด / Blocked</span></span>
       </div>
       <div class="day-switcher" id="day-switcher"></div>
       <div class="cal-wrap">
@@ -92,7 +135,79 @@
 
   <div class="cal-popover" id="cal-popover" hidden></div>
 
-  <p class="owner-footer" data-i18n="own.footer">PRAOW Owner Panel · demo by Mikaro Studio · ข้อมูลทั้งหมดเป็นข้อมูลจำลอง</p>
+  <div class="owner-modal" id="booking-modal" hidden>
+    <div class="owner-modal-card" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+      <div class="modal-top">
+        <h3 id="booking-modal-title" data-i18n="own.modal.new">New booking</h3>
+        <button type="button" class="pop-close" data-close-modal aria-label="Close">&times;</button>
+      </div>
+      <form id="booking-form">
+        <div class="field">
+          <label for="bk-service" data-i18n="own.field.service">Service</label>
+          <select id="bk-service" required></select>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="bk-date" data-i18n="own.field.date">Date</label>
+            <input type="date" id="bk-date" required>
+          </div>
+          <div class="field">
+            <label for="bk-time" data-i18n="own.field.time">Time</label>
+            <select id="bk-time" required></select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="bk-name" data-i18n="own.field.name">Customer name</label>
+          <input type="text" id="bk-name" required>
+        </div>
+        <div class="field">
+          <label for="bk-phone" data-i18n="own.field.phone">Phone</label>
+          <input type="text" id="bk-phone" required>
+        </div>
+        <div class="field">
+          <span class="field-label" data-i18n="own.field.deposit">Deposit</span>
+          <div class="dep-toggle">
+            <label><input type="radio" name="bk-dep" id="bk-dep-paid" value="paid" checked> <span data-i18n="own.dep.paid">Paid ✦ ฿500</span></label>
+            <label><input type="radio" name="bk-dep" id="bk-dep-pending" value="pending"> <span data-i18n="own.dep.pending">Pending ✦ ฿500</span></label>
+          </div>
+        </div>
+        <div class="field" id="bk-status-field" hidden>
+          <label for="bk-status" data-i18n="own.field.status">Status</label>
+          <select id="bk-status"></select>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn ghost" data-close-modal data-i18n="own.close">Close</button>
+          <button type="submit" class="btn" data-i18n="own.save">Save</button>
+        </div>
+        <div id="cancel-wrap" class="cancel-wrap" hidden>
+          <button type="button" class="btn-cancel-link" id="btn-cancel-booking" data-i18n="own.cancel">ยกเลิก / Cancel booking</button>
+        </div>
+        <div id="cancel-confirm-wrap" class="cancel-confirm" hidden>
+          <p data-i18n="own.cancel.confirm">Cancel this booking?</p>
+          <button type="button" class="btn ghost" id="btn-cancel-no" data-i18n="own.cancel.no">Keep booking</button>
+          <button type="button" class="btn bronze" id="btn-cancel-yes" data-i18n="own.cancel.yes">Yes, cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="owner-modal" id="avail-modal" hidden>
+    <div class="owner-modal-card avail-card" role="dialog" aria-modal="true">
+      <div class="modal-top">
+        <h3 data-i18n="own.avail.title">Manage availability</h3>
+        <button type="button" class="pop-close" data-close-avail aria-label="Close">&times;</button>
+      </div>
+      <div id="avail-body"></div>
+      <div class="modal-actions">
+        <button type="button" class="btn" data-close-avail data-i18n="own.close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="owner-footer">
+    <span data-i18n="own.footer">PRAOW Owner Panel · demo by Mikaro Studio · ข้อมูลทั้งหมดเป็นข้อมูลจำลอง</span>
+    <a href="#" id="reset-demo" class="reset-link" data-i18n="own.reset">รีเซ็ตเดโม่ / Reset demo</a>
+  </p>
 
   <script src="../js/owner-data.js"></script>
   <script src="../js/owner.js"></script>
