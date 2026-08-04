@@ -36,6 +36,11 @@
         <button type="button" data-lang="th">ไทย</button>
       </div>
       <span class="demo-pill" data-i18n="own.demo">เดโม่ · ข้อมูลจำลองทั้งหมด / Demo · all data simulated</span>
+      <nav class="owner-jump" id="owner-jump" aria-label="Sections">
+        <a href="#stats-panel" data-i18n="own.jump.stats">Stats</a>
+        <a href="#bookings-panel" data-i18n="own.jump.bookings">Bookings</a>
+        <a href="#calendar-panel" data-i18n="own.jump.calendar">Calendar</a>
+      </nav>
     </div>
   </header>
 
@@ -50,7 +55,7 @@
       </div>
     </div>
 
-    <section class="stat-row" aria-label="Stats">
+    <section class="stat-row" id="stats-panel" aria-label="Stats">
       <article class="stat-card">
         <div class="label" data-i18n="own.stat.today">Today's bookings</div>
         <div class="value" id="stat-today">0</div>
@@ -131,11 +136,14 @@
         <button type="button" class="panel-cta secondary" id="btn-availability" data-i18n="own.avail">จัดการเวลาว่าง / Manage availability</button>
       </div>
       <div class="day-switcher" id="day-switcher"></div>
+      <div class="cal-agenda" id="cal-agenda" hidden></div>
       <div class="cal-wrap">
         <div class="cal-grid" id="cal-grid"></div>
       </div>
     </section>
   </main>
+
+  <button type="button" class="back-top" id="back-top" hidden aria-label="Back to top">↑</button>
 
   <div class="cal-popover" id="cal-popover" hidden></div>
 

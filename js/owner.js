@@ -82,7 +82,13 @@
       "own.filter.to": "To",
       "own.jump.today": "วันนี้ / Today",
       "own.jump.pick": "Go to date",
+      "own.jump.stats": "Stats",
+      "own.jump.bookings": "Bookings",
+      "own.jump.calendar": "Calendar",
       "own.time.pick": "Tap a free slot",
+      "own.agenda.empty": "No bookings this day",
+      "own.agenda.blocked": "Blocked",
+      "own.agenda.free": "free slots",
       "own.legend.blocked": "เวลาที่ปิด / Blocked",
       "own.avail.title": "Manage availability",
       "own.avail.hint": "Tap hours to block or open. Use Day off for a full day.",
@@ -164,7 +170,13 @@
       "own.filter.to": "ถึง",
       "own.jump.today": "วันนี้ / Today",
       "own.jump.pick": "ไปวันที่",
+      "own.jump.stats": "สถิติ",
+      "own.jump.bookings": "รายการจอง",
+      "own.jump.calendar": "ปฏิทิน",
       "own.time.pick": "แตะช่วงเวลาว่าง",
+      "own.agenda.empty": "ไม่มีคิววันนี้",
+      "own.agenda.blocked": "ปิดรับ",
+      "own.agenda.free": "คิวว่าง",
       "own.legend.blocked": "เวลาที่ปิด / Blocked",
       "own.avail.title": "จัดการเวลาว่าง",
       "own.avail.hint": "แตะชั่วโมงเพื่อปิดหรือเปิด ใช้วันหยุดสำหรับทั้งวัน",
@@ -352,6 +364,7 @@
     bindModals();
     bindWeekNav();
     bindReset();
+    bindBackTop();
 
     refreshAll(false);
 
@@ -370,6 +383,33 @@
       Data.resetDemo();
       refreshAll(true);
     });
+  }
+
+  function bindBackTop() {
+    var btn = document.getElementById("back-top");
+    if (!btn) { return; }
+    function onScroll() {
+      var y = window.scrollY || document.documentElement.scrollTop || 0;
+      btn.hidden = y < 420;
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    var jump = document.getElementById("owner-jump");
+    if (jump) {
+      jump.addEventListener("click", function (e) {
+        var a = e.target.closest("a[href^='#']");
+        if (!a) { return; }
+        var id = a.getAttribute("href").slice(1);
+        var el = document.getElementById(id);
+        if (!el) { return; }
+        e.preventDefault();
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
   }
 
   function bindWeekNav() {
@@ -677,6 +717,77 @@
     }
   }
 
+  function renderAgenda(days, bySlot) {
+    var agenda = document.getElementById("cal-agenda");
+    if (!agenda) { return; }
+
+    var day = days[mobileDay];
+    var ds = Data.ymd(day);
+    var hours = Data.HOURS;
+    var dayBooks = [];
+    var blockedHours = [];
+    var freeCount = 0;
+
+    for (var hi = 0; hi < hours.length; hi++) {
+      var hour = hours[hi];
+      var items = bySlot[ds + "|" + hour] || [];
+      var blocked = Data.isBlocked(ds, hour);
+      if (blocked) { blockedHours.push(hour); }
+      else if (!items.length) { freeCount++; }
+      for (var j = 0; j < items.length; j++) {
+        dayBooks.push(items[j]);
+      }
+    }
+    dayBooks.sort(function (a, b) { return a.hour - b.hour; });
+
+    var html = '<div class="agenda-summary">' +
+      '<strong>' + t("own.dow." + mobileDay) + " " + day.getDate() + "</strong>" +
+      '<span>' + dayBooks.length + " · " + freeCount + " " + t("own.agenda.free") + "</span>" +
+      "</div>";
+
+    if (!dayBooks.length && !blockedHours.length) {
+      html += '<p class="agenda-empty">' + t("own.agenda.empty") + "</p>";
+    }
+
+    for (var i = 0; i < dayBooks.length; i++) {
+      var b = dayBooks[i];
+      html += '<button type="button" class="agenda-card ' + b.service + '" data-id="' + b.id + '">' +
+        '<span class="agenda-time">' + b.time + "</span>" +
+        '<span class="agenda-body">' +
+          '<span class="agenda-name">' + b.name + "</span>" +
+          '<span class="agenda-meta">' +
+            '<span class="svc-chip ' + b.service + '">' + svcLabel(b.service) + "</span>" +
+            '<span class="dep-state ' + b.deposit + '">' +
+              t(b.deposit === "paid" ? "own.dep.paid" : "own.dep.pending") +
+            "</span>" +
+          "</span>" +
+          '<span class="agenda-status">' + t("own.st." + b.status) + "</span>" +
+        "</span>" +
+        '<span class="agenda-chev" aria-hidden="true">›</span>' +
+      "</button>";
+    }
+
+    if (blockedHours.length) {
+      html += '<div class="agenda-blocked-row">' +
+        '<span class="agenda-blocked-swatch"></span>' +
+        '<span>' + t("own.agenda.blocked") + " · " +
+          blockedHours.map(function (h) { return Data.pad2(h) + ":00"; }).join(" · ") +
+        "</span></div>";
+    }
+
+    agenda.innerHTML = html;
+    agenda.hidden = false;
+
+    var cards = agenda.querySelectorAll(".agenda-card");
+    for (var c = 0; c < cards.length; c++) {
+      cards[c].addEventListener("click", function (e) {
+        e.stopPropagation();
+        var booking = Data.findById(this.getAttribute("data-id"));
+        if (booking) { openPopover(booking, this); }
+      });
+    }
+  }
+
   function renderCalendar() {
     var grid = document.getElementById("cal-grid");
     var switcher = document.getElementById("day-switcher");
@@ -690,11 +801,16 @@
       var sh = "";
       for (var d = 0; d < 7; d++) {
         var isToday = Data.ymd(days[d]) === todayY;
+        var count = Data.bookingsForDate(Data.ymd(days[d])).filter(function (b) {
+          return b.status !== "cancelled";
+        }).length;
         sh += '<button type="button" class="day-chip' +
           (d === mobileDay ? " on" : "") +
           (isToday ? " today-mark" : "") +
           '" data-day="' + d + '">' +
-          t("own.dow." + d) + " " + days[d].getDate() +
+          '<span class="day-chip-lab">' + t("own.dow." + d) + "</span>" +
+          '<span class="day-chip-num">' + days[d].getDate() + "</span>" +
+          (count ? '<span class="day-chip-count">' + count + "</span>" : "") +
           "</button>";
       }
       switcher.innerHTML = sh;
@@ -715,6 +831,8 @@
       if (!bySlot[key]) { bySlot[key] = []; }
       bySlot[key].push(bk);
     }
+
+    renderAgenda(days, bySlot);
 
     var html = '<div class="cal-head cal-corner"></div>';
     for (var h = 0; h < 7; h++) {

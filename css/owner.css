@@ -1073,42 +1073,296 @@ html[lang="th"] .owner-modal-card .field-label {
   padding: 5px 12px;
 }
 
+/* ---------- jump nav · back to top · mobile agenda ---------- */
+
+.owner-jump {
+  display: none;
+  width: 100%;
+  gap: 8px;
+  justify-content: stretch;
+  order: 6;
+  padding-top: 4px;
+}
+.owner-jump a {
+  flex: 1;
+  text-align: center;
+  padding: 9px 6px;
+  border-radius: 999px;
+  border: 1.5px solid var(--ink);
+  background: #fff;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.owner-jump a:active,
+.owner-jump a:hover { background: var(--ink); color: var(--ivory); }
+
+.back-top {
+  position: fixed;
+  right: 16px;
+  bottom: 20px;
+  z-index: 70;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink);
+  background: rgba(250, 246, 240, 0.96);
+  color: var(--ink);
+  font-size: 1.15rem;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(50, 38, 31, 0.14);
+  cursor: pointer;
+}
+.back-top:hover { background: var(--ink); color: var(--ivory); }
+.back-top[hidden] { display: none; }
+
+.cal-agenda { display: none; }
+
+.agenda-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.84rem;
+  color: var(--ink-soft);
+}
+.agenda-summary strong {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+html[lang="th"] .agenda-summary strong { font-family: var(--font-thai); }
+
+.agenda-empty {
+  padding: 28px 12px;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.agenda-card {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 10px;
+  padding: 14px 14px 14px 12px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(50, 38, 31, 0.04);
+  border-left-width: 5px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.agenda-card:active {
+  transform: scale(0.99);
+}
+.agenda-card.botox { border-left-color: #c4825c; background: rgba(196, 130, 92, 0.08); }
+.agenda-card.filler { border-left-color: #ba708a; background: rgba(186, 112, 138, 0.08); }
+.agenda-card.booster { border-left-color: #6e9476; background: rgba(110, 148, 118, 0.08); }
+.agenda-card.pico { border-left-color: #c49476; background: rgba(196, 148, 118, 0.1); }
+
+.agenda-time {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.1;
+}
+html[lang="th"] .agenda-time { font-family: var(--font-thai); }
+
+.agenda-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.agenda-name {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.agenda-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.agenda-status {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+}
+.agenda-chev {
+  font-size: 1.3rem;
+  color: var(--ink-soft);
+  padding-right: 2px;
+}
+
+.agenda-blocked-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px dashed var(--gold-line);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+  background: #f7f1e8;
+}
+.agenda-blocked-swatch {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  border-radius: 3px;
+  border: 1px solid var(--gold-line);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(192, 138, 107, 0.35),
+    rgba(192, 138, 107, 0.35) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+}
+
 /* ---------- mobile ---------- */
 
 @media (max-width: 900px) {
   .stat-row { grid-template-columns: repeat(2, 1fr); }
   .today-row {
-    grid-template-columns: 48px 1fr;
-    gap: 6px 10px;
+    grid-template-columns: 56px 1fr;
+    gap: 8px 12px;
+    padding: 14px;
+    border: 1px solid var(--line);
+    background: #fff;
+    margin-bottom: 2px;
   }
+  .today-row .time { font-size: 1.15rem; }
+  .today-row .name { font-size: 1rem; }
   .today-row .svc-chip,
   .today-row .dep-state,
   .today-row .status-select,
   .today-row .row-edit { grid-column: 1 / -1; justify-self: start; }
-  .panel-cta { font-size: 0.72rem; padding: 9px 12px; }
+  .panel-cta { font-size: 0.78rem; padding: 11px 14px; width: 100%; justify-content: center; }
+  .list-actions, .cal-actions { justify-content: stretch; }
   .week-jump-wrap { margin-left: 0; width: 100%; }
 }
 
 @media (max-width: 720px) {
-  .day-switcher { display: flex; }
-  .cal-grid {
-    grid-template-columns: 48px minmax(0, 1fr);
-    min-width: 0;
-  }
-  .cal-grid .cal-head:not(.show-day):not(.cal-corner),
-  .cal-grid .cal-cell:not(.show-day) {
-    display: none;
-  }
-  .owner-bar-in { padding: 10px 16px; }
-  .owner-main { padding: 20px 16px 36px; }
+  .owner-jump { display: flex; }
+  .owner-bar-in { padding: 10px 16px 12px; gap: 8px; }
+  .owner-main { padding: 16px 14px 72px; }
   .owner-date { display: none; }
-  .demo-pill { font-size: 0.65rem; padding: 4px 10px; }
-  .stat-row { gap: 10px; }
-  .stat-card .value { font-size: 1.5rem; }
+  .demo-pill {
+    display: none; /* keep chrome short on mobile; demo note stays in footer */
+  }
+  .owner-brand { margin-right: 0; }
+  .lang-toggle { margin-left: auto; }
+
+  .stat-row { gap: 8px; margin-bottom: 16px; }
+  .stat-card { padding: 14px 12px; border-radius: 14px; }
+  .stat-card .value { font-size: 1.45rem; }
+  .panel { padding: 16px 14px 14px; border-radius: 16px; margin-bottom: 16px; }
+  .filter-bar {
+    gap: 8px;
+    padding: 12px;
+    background: rgba(250, 246, 240, 0.8);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .filter-search { width: 100%; flex: 1 1 100%; min-width: 0; padding: 12px 14px; font-size: 1rem; }
+  .service-chips { width: 100%; }
+  .svc-filter { padding: 8px 12px; font-size: 0.78rem; }
+
+  .today-list {
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Mobile calendar = agenda cards, not cramped grid */
+  .day-switcher {
+    display: flex;
+    position: sticky;
+    top: 108px;
+    z-index: 40;
+    background: rgba(250, 246, 240, 0.96);
+    backdrop-filter: blur(10px);
+    padding: 8px 0;
+    margin: 0 0 12px;
+    gap: 6px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .day-chip {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    min-width: 52px;
+    padding: 8px 10px;
+    font-size: 0.68rem;
+    position: relative;
+  }
+  .day-chip-lab { letter-spacing: 0.02em; }
+  .day-chip-num {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: inherit;
+  }
+  .day-chip-count {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    min-width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    background: var(--bronze);
+    color: #fff;
+    font-size: 0.62rem;
+    line-height: 16px;
+    text-align: center;
+    padding: 0 4px;
+  }
+  .day-chip.on .day-chip-count { background: var(--ivory); color: var(--ink); }
+
+  .cal-agenda { display: block; }
+  .cal-wrap { display: none; }
+  .cal-legend {
+    gap: 10px 14px;
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+  }
+  .week-nav {
+    padding: 10px;
+    gap: 6px;
+  }
+  .week-nav-btn { width: 40px; height: 40px; }
+  .week-label { min-width: auto; font-size: 0.95rem; flex: 1 1 auto; }
   .field-row { grid-template-columns: 1fr; }
-  .week-label { min-width: auto; font-size: 0.95rem; }
+
+  #stats-panel,
+  #bookings-panel,
+  #calendar-panel {
+    scroll-margin-top: 120px;
+  }
+}
+
+@media (min-width: 721px) {
+  .cal-agenda { display: none !important; }
+  .owner-jump { display: none !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .login-fan .fan-ray { animation: none; opacity: 0.85; }
+  .back-top { transition: none; }
 }
