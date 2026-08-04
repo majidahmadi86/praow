@@ -1,0 +1,45 @@
+﻿Booking code,Date,Time,Customer,Service,Deposit,Status,Phone
+PRW-8242,2026-08-03,12:00,"คุณเอม",Botox,paid 500,done,087-xxx-xx51
+PRW-1676,2026-08-03,13:00,"คุณพลอย",Skin booster,paid 500,done,080-xxx-xx85
+PRW-8737,2026-08-03,15:00,"คุณน้ำ",Botox,paid 500,done,084-xxx-xx11
+PRW-2048,2026-08-03,17:00,"คุณนุ่น",Pico,paid 500,no-show,084-xxx-xx67
+PRW-9268,2026-08-03,18:00,"คุณแพร",Pico,paid 500,done,081-xxx-xx31
+PRW-2138,2026-08-04,10:00,"คุณเอิร์ธ",Skin booster,paid 500,arrived,086-xxx-xx13
+PRW-6446,2026-08-04,11:00,"คุณนุ่น",Filler,pending 500,confirmed,083-xxx-xx73
+PRW-1414,2026-08-04,12:00,"คุณเบล",Botox,paid 500,confirmed,081-xxx-xx45
+PRW-9647,2026-08-04,13:00,"คุณนุ่น",Skin booster,paid 500,confirmed,086-xxx-xx20
+PRW-1228,2026-08-04,14:00,"คุณเอม",Filler,paid 500,confirmed,082-xxx-xx17
+PRW-7418,2026-08-04,15:00,"คุณแพร",Skin booster,pending 500,confirmed,082-xxx-xx16
+PRW-2288,2026-08-04,16:00,"คุณไซน์",Pico,paid 500,confirmed,085-xxx-xx32
+PRW-7652,2026-08-04,17:00,"คุณเจน",Pico,paid 500,confirmed,087-xxx-xx13
+PRW-2640,2026-08-04,18:00,"คุณโบว์",Filler,paid 500,confirmed,080-xxx-xx58
+PRW-2825,2026-08-04,19:00,"คุณพลอย",Skin booster,paid 500,arrived,082-xxx-xx63
+PRW-6242,2026-08-05,10:00,"คุณหลิน",Skin booster,pending 500,confirmed,080-xxx-xx80
+PRW-5496,2026-08-05,11:00,"คุณเอิร์ธ",Filler,paid 500,confirmed,084-xxx-xx33
+PRW-4850,2026-08-05,12:00,"คุณฝ้าย",Botox,paid 500,confirmed,085-xxx-xx34
+PRW-2109,2026-08-05,13:00,"คุณมิ้นท์",Pico,paid 500,confirmed,085-xxx-xx92
+PRW-5095,2026-08-05,14:00,"คุณมิ้นท์",Filler,paid 500,confirmed,084-xxx-xx69
+PRW-3955,2026-08-05,15:00,"คุณเมย์",Filler,paid 500,confirmed,084-xxx-xx46
+PRW-5420,2026-08-05,16:00,"คุณพีช",Pico,paid 500,confirmed,086-xxx-xx34
+PRW-5581,2026-08-05,18:00,"คุณแอน",Filler,paid 500,confirmed,086-xxx-xx57
+PRW-5796,2026-08-06,10:00,"คุณไซน์",Pico,paid 500,confirmed,082-xxx-xx54
+PRW-6071,2026-08-06,13:00,"คุณเอม",Filler,pending 500,confirmed,085-xxx-xx69
+PRW-2982,2026-08-06,14:00,"คุณเจน",Botox,paid 500,no-show,089-xxx-xx30
+PRW-4982,2026-08-06,15:00,"คุณพีช",Filler,paid 500,confirmed,080-xxx-xx88
+PRW-1203,2026-08-06,16:00,"คุณเอม",Botox,pending 500,confirmed,087-xxx-xx59
+PRW-8673,2026-08-06,18:00,"คุณนุ่น",Pico,paid 500,confirmed,089-xxx-xx60
+PRW-4854,2026-08-06,19:00,"คุณมายด์",Filler,paid 500,confirmed,086-xxx-xx10
+PRW-3106,2026-08-07,10:00,"คุณพลอย",Skin booster,paid 500,confirmed,088-xxx-xx62
+PRW-6406,2026-08-07,11:00,"คุณเอม",Pico,paid 500,confirmed,084-xxx-xx28
+PRW-1386,2026-08-07,13:00,"คุณโบว์",Skin booster,paid 500,confirmed,085-xxx-xx89
+PRW-6489,2026-08-07,14:00,"คุณเมย์",Pico,paid 500,confirmed,084-xxx-xx43
+PRW-7426,2026-08-07,15:00,"คุณแพร",Pico,paid 500,confirmed,087-xxx-xx75
+PRW-9580,2026-08-07,16:00,"คุณแก้ว",Pico,pending 500,confirmed,081-xxx-xx87
+PRW-3872,2026-08-07,17:00,"คุณน้ำ",Filler,paid 500,confirmed,080-xxx-xx90
+PRW-8395,2026-08-07,18:00,"คุณเจน",Skin booster,paid 500,confirmed,080-xxx-xx84
+PRW-4728,2026-08-07,19:00,"คุณโบว์",Botox,pending 500,confirmed,086-xxx-xx52
+PRW-6390,2026-08-08,16:00,"คุณหลิน",Filler,paid 500,confirmed,080-xxx-xx61
+PRW-7476,2026-08-08,17:00,"คุณมิ้นท์",Skin booster,paid 500,confirmed,087-xxx-xx72
+PRW-6515,2026-08-08,18:00,"คุณแพร",Botox,paid 500,confirmed,082-xxx-xx69
+PRW-4682,2026-08-09,11:00,"คุณเอิร์ธ",Botox,pending 500,confirmed,081-xxx-xx57
+PRW-6025,2026-08-09,12:00,"คุณไซน์",Skin booster,paid 500,confirmed,085-xxx-xx55

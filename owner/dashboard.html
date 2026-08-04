@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="praow-page" content="owner-dashboard">
+  <title>PRAOW · Owner · Dashboard</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../fonts/fonts.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/owner.css">
+</head>
+<body class="owner-body" data-owner-page="dashboard">
+
+  <header class="owner-bar">
+    <div class="owner-bar-in">
+      <div class="owner-brand">
+        <svg class="logo-fan" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" fill="none">
+          <line x1="6" y1="26" x2="26" y2="26" stroke="#C08A6B" stroke-width="1" stroke-linecap="round"/>
+          <line class="fan-ray" data-ray="0" x1="16" y1="26" x2="8" y2="26" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/>
+          <line class="fan-ray" data-ray="1" x1="16" y1="26" x2="7.22" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/>
+          <line class="fan-ray" data-ray="2" x1="16" y1="26" x2="8.22" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/>
+          <line class="fan-ray" data-ray="3" x1="16" y1="26" x2="11.22" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/>
+          <line class="fan-ray" data-ray="4" x1="16" y1="26" x2="16" y2="12" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/>
+          <line class="fan-ray" data-ray="5" x1="16" y1="26" x2="20.78" y2="14.45" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/>
+          <line class="fan-ray" data-ray="6" x1="16" y1="26" x2="23.78" y2="18.22" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/>
+          <line class="fan-ray" data-ray="7" x1="16" y1="26" x2="24.78" y2="22.36" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/>
+          <line class="fan-ray" data-ray="8" x1="16" y1="26" x2="24" y2="26" stroke="#C08A6B" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <span class="owner-brand-text" data-i18n="own.brand">PRAOW · Owner</span>
+      </div>
+      <span class="owner-date" id="owner-date"></span>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="on">EN</button>
+        <button type="button" data-lang="th">ไทย</button>
+      </div>
+      <span class="demo-pill" data-i18n="own.demo">เดโม่ · ข้อมูลจำลองทั้งหมด / Demo · all data simulated</span>
+    </div>
+  </header>
+
+  <main class="owner-main">
+    <div class="owner-toolbar">
+      <h1 data-i18n="own.dash">Dashboard</h1>
+      <div class="export-wrap">
+        <button type="button" class="export-btn" id="export-btn" data-i18n="own.export">Export ▾</button>
+        <div class="export-menu" id="export-menu" hidden>
+          <button type="button" id="export-csv" data-i18n="own.export.csv">Bookings this week (CSV)</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="stat-row" aria-label="Stats">
+      <article class="stat-card">
+        <div class="label" data-i18n="own.stat.today">Today's bookings</div>
+        <div class="value" id="stat-today">0</div>
+      </article>
+      <article class="stat-card">
+        <div class="label" data-i18n="own.stat.deposit">Deposits this week</div>
+        <div class="value" id="stat-deposit">฿0</div>
+      </article>
+      <article class="stat-card">
+        <div class="label" data-i18n="own.stat.noshow">No-show rate</div>
+        <div class="value" id="stat-noshow">0%</div>
+      </article>
+      <article class="stat-card">
+        <div class="label" data-i18n="own.stat.next">Next free slot</div>
+        <div class="value" id="stat-next">·</div>
+        <div class="hint" id="stat-next-hint"></div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2 data-i18n="own.today">Today</h2>
+        <span class="meta" id="today-meta"></span>
+      </div>
+      <div class="today-list" id="today-list"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2 data-i18n="own.week">Week calendar</h2>
+        <span class="meta" data-i18n="own.week.meta">Mon · Sun · 10:00 · 20:00</span>
+      </div>
+      <div class="day-switcher" id="day-switcher"></div>
+      <div class="cal-wrap">
+        <div class="cal-grid" id="cal-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cal-popover" id="cal-popover" hidden></div>
+
+  <p class="owner-footer" data-i18n="own.footer">PRAOW Owner Panel · demo by Mikaro Studio · ข้อมูลทั้งหมดเป็นข้อมูลจำลอง</p>
+
+  <script src="../js/owner-data.js"></script>
+  <script src="../js/owner.js"></script>
+</body>
+</html>

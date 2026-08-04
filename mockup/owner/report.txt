@@ -1,0 +1,15 @@
+auth-redirect: PASS url=http://127.0.0.1:63773/owner/index.html
+status-change: confirmed -> arrived PASS
+popover: PASS
+csv-bom: PASS
+csv-count-lines: 45
+csv-first-6:
+  1|Booking code,Date,Time,Customer,Service,Deposit,Status,Phone
+  2|PRW-8242,2026-08-03,12:00,"คุณเอม",Botox,paid 500,done,087-xxx-xx51
+  3|PRW-1676,2026-08-03,13:00,"คุณพลอย",Skin booster,paid 500,done,080-xxx-xx85
+  4|PRW-8737,2026-08-03,15:00,"คุณน้ำ",Botox,paid 500,done,084-xxx-xx11
+  5|PRW-2048,2026-08-03,17:00,"คุณนุ่น",Pico,paid 500,no-show,084-xxx-xx67
+  6|PRW-9268,2026-08-03,18:00,"คุณแพร",Pico,paid 500,done,081-xxx-xx31
+csv-thai: PASS
+bookings: 44 noshow: 2
+noindex-meta: PASS (noindex,nofollow)
