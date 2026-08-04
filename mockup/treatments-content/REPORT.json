@@ -1,0 +1,61 @@
+{
+  "shots": [
+    "botox-1440-en.png",
+    "filler-1440-en.png",
+    "skin-1440-en.png",
+    "botox-390-en.png",
+    "filler-390-en.png",
+    "skin-390-en.png",
+    "botox-1440-th.png",
+    "filler-1440-th.png",
+    "skin-1440-th.png",
+    "botox-390-th.png",
+    "filler-390-th.png",
+    "skin-390-th.png",
+    "booking-preselect-filler.png"
+  ],
+  "checks": {
+    "bookingPreselect": {
+      "text": "Filler consultationFrom ฿12,900 / cc",
+      "index": "1"
+    },
+    "structure": [
+      {
+        "id": "botox",
+        "mediaCount": 1,
+        "imgCount": 1,
+        "title": "Botox",
+        "titleClip": 0,
+        "hasBody": true,
+        "chipCount": 4,
+        "hasConsult": true,
+        "hasBook": true,
+        "bookHref": "booking.html?service=botox"
+      },
+      {
+        "id": "filler",
+        "mediaCount": 1,
+        "imgCount": 1,
+        "title": "Filler",
+        "titleClip": 0,
+        "hasBody": true,
+        "chipCount": 4,
+        "hasConsult": true,
+        "hasBook": true,
+        "bookHref": "booking.html?service=filler"
+      },
+      {
+        "id": "skin",
+        "mediaCount": 1,
+        "imgCount": 1,
+        "title": "Skin quality",
+        "titleClip": 0,
+        "hasBody": true,
+        "chipCount": 3,
+        "hasConsult": true,
+        "hasBook": true,
+        "bookHref": "booking.html?service=skin"
+      }
+    ]
+  }
+}

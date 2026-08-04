@@ -99,16 +99,30 @@
       "page.book.lede": "Pick a service, choose a slot, then lock it with a ฿500 deposit.",
       "tx.botox.h": "Botox",
       "tx.botox.p": "Softens dynamic lines by easing selected facial muscles. Areas and units are decided with the doctor after assessment.",
+      "tx.botox.body": "Softens the lines that form from expression · forehead, frown, crow's feet · while keeping your face moving naturally. Results appear in 3-7 days and last 3-4 months.",
+      "tx.botox.chip1": "Forehead",
+      "tx.botox.chip2": "Frown lines",
+      "tx.botox.chip3": "Crow's feet",
+      "tx.botox.chip4": "Jaw",
       "tx.botox.time": "20 · 40 min",
       "tx.botox.down": "Usually light redness for a few hours",
       "tx.botox.price": "From ฿6,500 / area",
       "tx.filler.h": "Filler",
       "tx.filler.p": "Restores volume or softens contours with hyaluronic filler. Amount in cc is planned to your face, not a fixed look.",
+      "tx.filler.body": "Restores volume and shape · lips, cheeks, chin, under-eyes · with hyaluronic acid placed by a doctor's hand. Immediate result, refined over two weeks.",
+      "tx.filler.chip1": "Lips",
+      "tx.filler.chip2": "Cheeks",
+      "tx.filler.chip3": "Chin",
+      "tx.filler.chip4": "Under-eyes",
       "tx.filler.time": "30 · 60 min",
       "tx.filler.down": "Possible swelling for 1 · 3 days",
       "tx.filler.price": "From ฿12,900 / cc",
       "tx.skin.h": "Skin quality",
       "tx.skin.p": "Booster and pico sessions aimed at texture, tone and glow. Number of sessions depends on your baseline skin.",
+      "tx.skin.body": "Texture, pores and glow · skin boosters and pico laser layered into a plan for your skin, not a one-size treatment.",
+      "tx.skin.chip1": "Boosters",
+      "tx.skin.chip2": "Pico",
+      "tx.skin.chip3": "Pigment",
       "tx.skin.time": "30 · 75 min",
       "tx.skin.down": "Mild flush or dryness for 1 · 2 days",
       "tx.skin.price": "From ฿3,900",
@@ -116,6 +130,8 @@
       "tx.meta.down": "Downtime",
       "tx.meta.price": "From price",
       "tx.note": "Every plan starts with a free doctor consultation",
+      "tx.cta.consult": "Free doctor consultation ↗",
+      "tx.cta.book": "Book this",
       "cf.demo": "Demo mode · nothing is sent to a clinic. Form runs in your browser.",
       "cf.s1t": "Share",
       "cf.s2t": "Review",
@@ -281,16 +297,30 @@
       "page.book.lede": "เลือกบริการ เลือกช่วงเวลา แล้วล็อกคิวด้วยมัดจำ 500.-",
       "tx.botox.h": "โบท็อกซ์",
       "tx.botox.p": "ช่วยผ่อนคลายกล้ามเนื้อที่ทำให้เกิดริ้วรอยจากการแสดงสีหน้า จุดและปริมาณตัดสินร่วมกับแพทย์หลังประเมิน",
+      "tx.botox.body": "ลดเลือนริ้วรอยจากการแสดงสีหน้า หน้าผาก ระหว่างคิ้ว หางตา โดยใบหน้ายังขยับได้เป็นธรรมชาติ เห็นผลใน 3-7 วัน อยู่ได้ 3-4 เดือน",
+      "tx.botox.chip1": "หน้าผาก",
+      "tx.botox.chip2": "ระหว่างคิ้ว",
+      "tx.botox.chip3": "หางตา",
+      "tx.botox.chip4": "กราม",
       "tx.botox.time": "20 · 40 นาที",
       "tx.botox.down": "มักมีรอยแดงเล็กน้อยไม่กี่ชั่วโมง",
       "tx.botox.price": "เริ่ม 6,500.- / จุด",
       "tx.filler.h": "ฟิลเลอร์",
       "tx.filler.p": "เติมปริมาตรหรือปรับโครงเบา ๆ ด้วยฟิลเลอร์ไฮยาลูรอน ปริมาณซีซีวางแผนตามใบหน้า ไม่ใช่ลุคตายตัว",
+      "tx.filler.body": "เติมเต็มและปรับรูปหน้า ริมฝีปาก แก้ม คาง ใต้ตา ด้วยกรดไฮยาลูรอนิก โดยแพทย์ เห็นผลทันที และเข้าที่ภายในสองสัปดาห์",
+      "tx.filler.chip1": "ริมฝีปาก",
+      "tx.filler.chip2": "แก้ม",
+      "tx.filler.chip3": "คาง",
+      "tx.filler.chip4": "ใต้ตา",
       "tx.filler.time": "30 · 60 นาที",
       "tx.filler.down": "อาจบวม 1 · 3 วัน",
       "tx.filler.price": "เริ่ม 12,900.- / ซีซี",
       "tx.skin.h": "ผิวใส",
       "tx.skin.p": "บูสเตอร์และปิโกเพื่อพื้นผิว โทนสี และความเรียบเนียน จำนวนครั้งขึ้นกับสภาพผิวตั้งต้น",
+      "tx.skin.body": "ผิวเรียบเนียน รูขุมขนกระชับ และความใส ด้วยสกินบูสเตอร์และ พิโคเลเซอร์ ออกแบบเป็นแผนเฉพาะผิวของคุณ",
+      "tx.skin.chip1": "สกินบูสเตอร์",
+      "tx.skin.chip2": "พิโค",
+      "tx.skin.chip3": "ฝ้า กระ",
       "tx.skin.time": "30 · 75 นาที",
       "tx.skin.down": "อาจแดงหรือแห้งเล็กน้อย 1 · 2 วัน",
       "tx.skin.price": "เริ่ม 3,900.-",
@@ -298,6 +328,8 @@
       "tx.meta.down": "Downtime",
       "tx.meta.price": "ราคาเริ่มต้น",
       "tx.note": "ทุกแผนการรักษาเริ่มจากปรึกษาแพทย์ฟรี",
+      "tx.cta.consult": "ปรึกษาแพทย์ฟรี ↗",
+      "tx.cta.book": "จองคิวนี้",
       "cf.demo": "โหมดเดโม่ · ไม่ส่งข้อมูลไปคลินิกจริง ฟอร์มทำงานในเบราว์เซอร์",
       "cf.s1t": "ส่งข้อมูล",
       "cf.s2t": "ประเมิน",
@@ -790,6 +822,13 @@
     };
 
     var services = ["bk.svc1", "bk.svc2", "bk.svc3"];
+    var serviceMap = { botox: 0, filler: 1, skin: 2, "0": 0, "1": 1, "2": 2 };
+    try {
+      var svcParam = new URLSearchParams(window.location.search).get("service");
+      if (svcParam != null && Object.prototype.hasOwnProperty.call(serviceMap, String(svcParam).toLowerCase())) {
+        state.service = serviceMap[String(svcParam).toLowerCase()];
+      }
+    } catch (e) { /* ignore */ }
 
     function dayLabel(offset) {
       var d = new Date();
